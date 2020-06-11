@@ -8,7 +8,7 @@ import com.google.gson.Gson;
  * <p>
  * <b>Classe</b> Per la gestione della richiesta dati di un post
  * </p> 
- * @author Zhang Yihang & Simone Scalella
+ * @author Zhang Yihang e Simone Scalella
  * @version 0.9
  * @see univpm.OOP2020.model.page_post
  */
@@ -78,7 +78,7 @@ public class page_post  {
 		public int getUnique_impression() {return unique_impression;}
 		/**
 		 * 
-		 * @param INT unique_impression,  derivato dal JSONObject ottenuto tramite la get all'API della pagina Facebook
+		 * @param unique_impression<code>int</code>  derivato dal JSONObject ottenuto tramite la get all'API della pagina Facebook
 		 */
 		public void setImpression_unique(int unique_impression) {this.unique_impression = unique_impression;}
 		/**

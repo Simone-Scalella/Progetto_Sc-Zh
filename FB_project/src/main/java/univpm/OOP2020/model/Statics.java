@@ -16,7 +16,7 @@ import univpm.OOP2020.body.request_body;
  * <p>
  * <b>Classe</b> Per la gestione della richiesta della statistica 
  * </p>
- * @author Zhang Yihang & Simone Scalella
+ * @author Zhang Yihang e Simone Scalella
  * @version 0.9
  * @see univpm.OOP2020.model.FB_page_info
  * @see univpm.OOP2020.model.ALL_post
@@ -85,9 +85,9 @@ public class Statics {
 
 	/**
 	 * @param query e' la struttura della condizione del filtro.
-	 * @return <code> Vector<page_post> </code> se la condizione di <code> query </code> e' valido
-	 * @exception <code> ResponseStatusException </code> con messaggio d'errore se la condizione di  <code> query </code> e' invalido
-	 * @see univpm.esempio.body.request_body;
+	 * @return <code> Vector page_post  </code> se la condizione di <code> query </code> e' valido
+	 * @throws ResponseStatusException con messaggio d'errore se la condizione di  <code> query </code> e' invalido
+	 * @see univpm.OOP2020.body.request_body
 	 */
 	public Object filter_method(request_body query) {
 		
@@ -134,7 +134,7 @@ public class Statics {
 	private float divide(int a,int b){return (float)a/(float)b;}
 	/**
 	 * Restituisce il vettore di page_post
-	 * @return un <code>Vector<page_post></code> con tutti i posts della pagina
+	 * @return un <code>Vector page_post</code> con tutti i posts della pagina
 	 */
 	public Vector<page_post> get_all_Post() {return Posts_vector;}
 	/**
@@ -149,7 +149,7 @@ public class Statics {
 	public FB_page_info get_page_all() {return page;}
 	/**
 	 * Aggiorna il periodo della metrica Facebook
-	 * @param period l'indica il nuovo periodo che desidera di aggiornare
+	 * @param period <code>String</code> l'indica il nuovo periodo che desidera di aggiornare
 	 */
 	public void Update_period(String period) {this.page = new FB_page_info(Id,Access_token,period);}
 	/**

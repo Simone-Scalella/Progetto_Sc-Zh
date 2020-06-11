@@ -14,7 +14,7 @@ import java.util.Arrays;
  * <p>
  * <b>Class</b> che contiene l'informazioni e i metodi relativa alla pagina
  * </p>
- * @author Zhang Yihang & Simone Scalella
+ * @author Zhang Yihang e Simone Scalella
  * 
  */
 public class FB_page_info implements Download {
@@ -37,26 +37,69 @@ public class FB_page_info implements Download {
 	private Vector<Integer> metric_values = new Vector<Integer>(metrics_arry.length);
 	/**
 	 * Indica la struttura in cui sono salvati i dati delle varie metriche
-	 * @author Leo
+	 * @author Zhang Yihang e Scalella Simone
 	 *
 	 */
 	public class metric_values {
+		/**
+		 * attributo privato relativo alla metric page_consumptions
+		 */
 		private Integer page_consumptions = null;
+		/**
+		 * attributo privato relativo alla metric page_consumptions_unique
+		 */
 		private Integer page_consumptions_unique = null;
+		/**
+		 * attributo privato relativo alla metric page_negative_feedback
+		 */
 		private Integer page_negative_feedback = null;
+		/**
+		 * attributo privato relativo alla metric page_negative_feedback_unique
+		 */
 		private Integer page_negative_feedback_unique= null;
+		/**
+		 * attributo privato relativo alla metric page_impressions
+		 */
 		private Integer page_impressions = null;
+		/**
+		 * attributo privato relativo alla page_impressions_unique
+		 */
 		private Integer page_impressions_unique = null;
+		/**
+		 * attributo privato relativo alla page_fan_adds_unique
+		 */
 		private Integer page_fan_adds_unique = null;
-		
+		/**
+		 * costruttore vuoto della classe metric_values
+		 */
 		public metric_values() {}
-
+        /**
+         * @return metodo getters che restituisce l'attributo privato page_consumptions
+         */
 		public Integer getPage_consumptions() {return page_consumptions;}
+        /**
+         * @return metodo getters che restituisce l'attributo privato page_consumptions_unique
+         */
 		public Integer getPage_consumptions_unique() {return page_consumptions_unique;}
+        /**
+         * @return metodo getters che restituisce l'attributo privato page_negative_feedback
+         */
 		public Integer getPage_negative_feedback() {return page_negative_feedback;}
+        /**
+         * @return metodo getters che restituisce l'attributo privato page_negative_feedback_unique
+         */
 		public Integer getPage_negative_feedback_unique() {return page_negative_feedback_unique;}
+        /**
+         * @return metodo getters che restituisce l'attributo privato page_impressions
+         */
 		public Integer getPage_impressions() {return page_impressions;}
+        /**
+         * @return metodo getters che restituisce l'attributo privato page_impressions_unique
+         */
 		public Integer getPage_impressions_unique() {return page_impressions_unique;}
+        /**
+         * @return metodo getters che restituisce l'attributo privato page_fan_adds_unique
+         */
 		public Integer getPage_fan_adds_unique() {return page_fan_adds_unique;};
 		
 	}
@@ -66,9 +109,9 @@ public class FB_page_info implements Download {
 	private metric_values metric_Object = new metric_values(); //inizializzazione
 	/**
 	 * Costruisce la pagina tramite API Facebook con dati forniti dall'utente 
-	 * @param <code>String</code> page_ID indica Id della pagina da acquisire le informazioni tramite API Facebook
-	 * @param <code>String</code> Access_Token indica Access Token della pagina da acquisire le informazioni tramite API Facebook
-	 * @param <code>String</code> period indica il periodo della pagina da acquisire le informazioni tramite API Faceboo
+	 * @param page_ID <code>String</code>  indica Id della pagina da cui acquisire le informazioni tramite API Facebook
+	 * @param Access_Token <code>String</code>  indica Access Token della pagina da acquisire le informazioni tramite API Facebook
+	 * @param period <code>String</code>  indica il periodo della pagina da acquisire le informazioni tramite API Faceboo
 	 * @see #GetPage(String, String, String)
 	 */
 	public FB_page_info(String page_ID,String Access_Token,String period) {
@@ -96,9 +139,9 @@ public class FB_page_info implements Download {
 	
 		/**
 		 * Restituisce i dati primitivi dalla pagina tramite API Facebook con dati forniti dall'utente 
-		 * @param <code>String</code> page_ID indica Id della pagina da acquisire le informazioni tramite API Facebook
-		 * @param <code>String</code> Access_Token indica Access Token della pagina da acquisire le informazioni tramite API Facebook
-	 	 * @param <code>String</code> period indica il periodo della pagina da acquisire le informazioni tramite API Facebook
+		 * @param ID <code>String</code> page_ID indica Id della pagina da acquisire le informazioni tramite API Facebook
+		 * @param Access_token <code>String</code> Access_Token indica Access Token della pagina da acquisire le informazioni tramite API Facebook
+	 	 * @param metrics <code>String</code> period indica il periodo della pagina da acquisire le informazioni tramite API Facebook
 	 	 * @return <code>JSONObject</code> che contiene i dati primitivi della pagina
 		 */
 		@Override

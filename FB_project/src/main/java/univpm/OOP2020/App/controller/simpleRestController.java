@@ -13,11 +13,11 @@ import univpm.OOP2020.body.request_body;
 import univpm.OOP2020.model.Statics;
 
 /**<p>
- * <b>Classe<b> tra cui l'utente interagisce con l'applicazione tramite i Mapping
+ * <b>Classe</b> tra cui l'utente interagisce con l'applicazione tramite i Mapping
  *</p>
- * @author Zhang Yihang & Simone Scalella 
+ * @author Zhang Yihang e Simone Scalella 
  * @see univpm.OOP2020.model.Statics
- * 
+ * qualcosa
  */
 @RestController
 public class simpleRestController {
@@ -26,10 +26,12 @@ public class simpleRestController {
 	Statics Statics1 = new Statics();
 	/**
 	 * Mapping "/Login" che ci permette di effettuare login tramite i parametri <code> ID_Page </code> id della pagina <code>Access_Token</code> e <code>Period</code> periodo delle metriche
-	 * @return <code>String</code> che indica Login successo
-	 * @exception <code>ResponseStatusException</code> se login fallisce 
+	 * @throws ResponseStatusException se login fallisce 
 	 * @see univpm.OOP2020.model.Statics#Login(String, String, String)
-	 * 
+	 * @param param1 <code>String</code> ID_page con id della pagina
+	 * @param param2 <code>String</code> Access_Token con access token di API Facebook
+	 * @param param3 <code>String</code> Period con il periodo delle metriche
+	 * @return <code>String</code> che indica Login successo
 	 */
 	@GetMapping("/login")
 	public Object Method6(@RequestParam(name="ID_Page",defaultValue="null") String param1,
@@ -42,10 +44,10 @@ public class simpleRestController {
 	/**
 	 * il Mapping "/get_post_filtered" Ci restituisce il post basando sul filtro che inserisce nel <code>body</code>
 	 * @param body e' l'oggetto del query da inserire
-	 * @exception <code>ResponseStatusException</code> se non e' effettuato login
-	 * @exception <code>ResponseStatusException</code> se espressione e' invalida
-	 * @exception <code>ResponseStatusException</code> se metriche non esiste
-	 * @return <code>Vector<page_post></code> che contiene i post che soddisfano la condizione del filtro
+	 * @throws ResponseStatusException se non e' effettuato login
+	 * @throws ResponseStatusException se espressione e' invalida
+	 * @throws ResponseStatusException se metriche non esiste
+	 * @return <code>Vector page_post </code> che contiene i post che soddisfano la condizione del filtro
 	 * @see univpm.OOP2020.model.Statics#filter_method(request_body)
 	 * 
 	 */
@@ -57,8 +59,8 @@ public class simpleRestController {
 	/**
 	 * 
 	 * Mapping "/get_all_post" Restituisce tutti i post della pagina
-	 * @exception <code>ResponseStatusException</code> se non e' effettuato login
-	 * @return  <code>Vector<page_post></code> che contiene tutti i post della pagina
+	 * @throws ResponseStatusException se non e' effettuato login
+	 * @return  <code>Vector page_post </code> che contiene tutti i post della pagina
 	 * @see univpm.OOP2020.model.Statics#get_all_Post()
 	 */
 	@GetMapping("/get_all_post")
@@ -68,8 +70,10 @@ public class simpleRestController {
 	}
 	/**
 	 * Mapping "/get_page" ci restituisce informazione della pagina
-	 * @exception <code>ResponseStatusException</code> se non e' effettuato login
+	 * @throws ResponseStatusException se non e' effettuato login
 	 * @see univpm.OOP2020.model.Statics#get_page_all()
+	 * @return <code>FB_page_info</code> che contiene informazione della pagina
+	 * 
 	 */
 	@GetMapping("/get_page")
 	public Object Method7(){
@@ -80,7 +84,7 @@ public class simpleRestController {
 	 * Mapping "/update_period" ci consente di cambiare il periodo delle metriche del Facebook
 	 * @param param1 con il nome new_period indica il periodo che l'utente desidera di cambiare il campo valido sono <code>day</code>, <code> week</code> e <code>days_28</code>
 	 * @return <code>String</code> che contiene messaggio della richiesta se e' andata a buon fine
-	 * @exception <code>ResponseStatusException</code> se non e' effettuato login
+	 * @throws ResponseStatusException se non e' effettuato login
 	 * @see univpm.OOP2020.model.Statics#Update_period(String)
 	 */
 	@GetMapping("/update_period")
@@ -90,7 +94,7 @@ public class simpleRestController {
 	}
 	/**
 	 * Mapping "/consumption_per_post" ci restituisce informazione del consumo medio del post della pagina
-	 * @exception <code>ResponseStatusException</code> se non e' effettuato login
+	 * @throws ResponseStatusException se non e' effettuato login
 	 * @return <code>String</code> che contiene il valore dalla richiesta
 	 * @see univpm.OOP2020.model.Statics#consumption_per_post()
 	 */
@@ -101,7 +105,7 @@ public class simpleRestController {
 	}
 	/**
 	 * Mapping "/consumption_per_post" ci restituisce informazione della reazione media dei posts della pagina
-	 * @exception <code>ResponseStatusException</code> se non e' effettuato login
+	 * @throws ResponseStatusException se non e' effettuato login
 	 * @return <code>String</code> che contiene messaggio della richiesta se e' andata a buon fine
 	 */
 	@GetMapping("/average_post_reaction")
