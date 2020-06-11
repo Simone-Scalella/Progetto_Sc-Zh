@@ -5,14 +5,15 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import univpm.OOP2020.model.*;
+import univpm.OOP2020.Model.*;
+import univpm.OOP2020.Service.FB_page_info;
 /**
  * <p>
  * <b>Class</b> che viene utilizzata per eseguire dei test sulla classe FB_page_info e Statics
  * </p>
  * @author Zhang Yihang & Simone Scalella
- * @see univpm.OOP2020.model.FB_page_info
- * @see univpm.OOP2020.model.Statics
+ * @see univpm.OOP2020.Service.FB_page_info
+ * @see univpm.OOP2020.Model.Statics
  */
 class OOP_2020_Test {
 	/**

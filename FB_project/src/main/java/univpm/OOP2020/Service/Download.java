@@ -1,12 +1,12 @@
-package univpm.OOP2020.interf;
+package univpm.OOP2020.Service;
 import org.json.JSONObject;
 /**
  * 
  * <p>
  * <b>Interfaccia</b> che contiene il metodo condiviso tra post e page 
  * </p>
- * @see univpm.OOP2020.model.ALL_post
- * @see univpm.OOP2020.model.FB_page_info
+ * @see univpm.OOP2020.Service.ALL_post
+ * @see univpm.OOP2020.Service.FB_page_info
  */
 public interface Download {
 	/**

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_E5pPkKwHEeqms8yEV8tB4w" name="NewModel">
+  <packageImport xmi:id="__RNqoKwKEeqms8yEV8tB4w">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_YXCcYKwHEeqms8yEV8tB4w" name="univpm.OOP2020.App">
+    <packagedElement xmi:type="uml:Class" xmi:id="_gi6mwKwJEeqms8yEV8tB4w" name="FB_page_info" visibility="public"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_eWD_kKwHEeqms8yEV8tB4w" name="univpm.OOP2020.App.cpntroller"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_eldtgKwHEeqms8yEV8tB4w" name="univpm.OOP2020.Body"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_gnHcMKwHEeqms8yEV8tB4w" name="univpm.OOP2020.Service"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_5tlxYKwHEeqms8yEV8tB4w" name="univpm.OOP2020.Model"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_6CJFEKwHEeqms8yEV8tB4w" name="univpm.OOP2020.Test"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_EELKsKwIEeqms8yEV8tB4w" name="FB_page_info" visibility="public"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_w1HC4KwJEeqms8yEV8tB4w" name="metric_values" visibility="public">
+    <ownedAttribute xmi:id="_4fD20KwJEeqms8yEV8tB4w"/>
+    <ownedAttribute xmi:id="_47R4wKwJEeqms8yEV8tB4w"/>
+    <ownedAttribute xmi:id="_4-ouwKwJEeqms8yEV8tB4w"/>
+    <ownedAttribute xmi:id="_5CO1UKwJEeqms8yEV8tB4w"/>
+    <ownedAttribute xmi:id="_5Ho5wKwJEeqms8yEV8tB4w"/>
+    <ownedAttribute xmi:id="_6YbMMKwJEeqms8yEV8tB4w"/>
+    <ownedAttribute xmi:id="_6baOwKwJEeqms8yEV8tB4w"/>
+  </packagedElement>
+</uml:Model>

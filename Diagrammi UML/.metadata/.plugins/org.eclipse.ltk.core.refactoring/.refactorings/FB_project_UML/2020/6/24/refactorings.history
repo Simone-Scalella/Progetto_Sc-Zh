@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;FB_project_UML/diagrammi.uml&apos; to &apos;Diagrammi.uml&apos;" description="Rename resource &apos;diagrammi.uml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="diagrammi.uml" name="Diagrammi.uml" stamp="1591894354848" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;FB_project_UML/Diagrammi.uml&apos; to &apos;Diagrammi_use_case.uml&apos;" description="Rename resource &apos;Diagrammi.uml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Diagrammi.uml" name="Diagrammi_use_case.uml" stamp="1591895736164" updateReferences="true"/>
+</session>

@@ -9,14 +9,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
-import univpm.OOP2020.body.request_body;
-import univpm.OOP2020.model.Statics;
+import univpm.OOP2020.Body.request_body;
+import univpm.OOP2020.Model.Statics;
 
 /**<p>
  * <b>Classe</b> tra cui l'utente interagisce con l'applicazione tramite i Mapping
  *</p>
  * @author Zhang Yihang e Simone Scalella 
- * @see univpm.OOP2020.model.Statics
+ * @see univpm.OOP2020.Model.Statics
  * qualcosa
  */
 @RestController
@@ -27,7 +27,7 @@ public class simpleRestController {
 	/**
 	 * Mapping "/Login" che ci permette di effettuare login tramite i parametri <code> ID_Page </code> id della pagina <code>Access_Token</code> e <code>Period</code> periodo delle metriche
 	 * @throws ResponseStatusException se login fallisce 
-	 * @see univpm.OOP2020.model.Statics#Login(String, String, String)
+	 * @see univpm.OOP2020.Model.Statics#Login(String, String, String)
 	 * @param param1 <code>String</code> ID_page con id della pagina
 	 * @param param2 <code>String</code> Access_Token con access token di API Facebook
 	 * @param param3 <code>String</code> Period con il periodo delle metriche
@@ -48,7 +48,7 @@ public class simpleRestController {
 	 * @throws ResponseStatusException se espressione e' invalida
 	 * @throws ResponseStatusException se metriche non esiste
 	 * @return <code>Vector page_post </code> che contiene i post che soddisfano la condizione del filtro
-	 * @see univpm.OOP2020.model.Statics#filter_method(request_body)
+	 * @see univpm.OOP2020.Model.Statics#filter_method(request_body)
 	 * 
 	 */
 	@GetMapping("/get_post_filtered")
@@ -61,7 +61,7 @@ public class simpleRestController {
 	 * Mapping "/get_all_post" Restituisce tutti i post della pagina
 	 * @throws ResponseStatusException se non e' effettuato login
 	 * @return  <code>Vector page_post </code> che contiene tutti i post della pagina
-	 * @see univpm.OOP2020.model.Statics#get_all_Post()
+	 * @see univpm.OOP2020.Model.Statics#get_all_Post()
 	 */
 	@GetMapping("/get_all_post")
 	public Object Method6(){
@@ -71,7 +71,7 @@ public class simpleRestController {
 	/**
 	 * Mapping "/get_page" ci restituisce informazione della pagina
 	 * @throws ResponseStatusException se non e' effettuato login
-	 * @see univpm.OOP2020.model.Statics#get_page_all()
+	 * @see univpm.OOP2020.Model.Statics#get_page_all()
 	 * @return <code>FB_page_info</code> che contiene informazione della pagina
 	 * 
 	 */
@@ -85,7 +85,7 @@ public class simpleRestController {
 	 * @param param1 con il nome new_period indica il periodo che l'utente desidera di cambiare il campo valido sono <code>day</code>, <code> week</code> e <code>days_28</code>
 	 * @return <code>String</code> che contiene messaggio della richiesta se e' andata a buon fine
 	 * @throws ResponseStatusException se non e' effettuato login
-	 * @see univpm.OOP2020.model.Statics#Update_period(String)
+	 * @see univpm.OOP2020.Model.Statics#Update_period(String)
 	 */
 	@GetMapping("/update_period")
 	public Object Method8(@RequestParam(name="new_period",defaultValue="days_28") String param1){
@@ -96,7 +96,7 @@ public class simpleRestController {
 	 * Mapping "/consumption_per_post" ci restituisce informazione del consumo medio del post della pagina
 	 * @throws ResponseStatusException se non e' effettuato login
 	 * @return <code>String</code> che contiene il valore dalla richiesta
-	 * @see univpm.OOP2020.model.Statics#consumption_per_post()
+	 * @see univpm.OOP2020.Model.Statics#consumption_per_post()
 	 */
 	@GetMapping("/consumption_per_post")
 	public String Method9(){

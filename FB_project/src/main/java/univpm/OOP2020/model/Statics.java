@@ -1,4 +1,4 @@
-package univpm.OOP2020.model;
+package univpm.OOP2020.Model;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -11,22 +11,24 @@ import javax.script.ScriptException;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.server.ResponseStatusException;
 
-import univpm.OOP2020.body.request_body;
+import univpm.OOP2020.Body.request_body;
+import univpm.OOP2020.Service.ALL_post;
+import univpm.OOP2020.Service.FB_page_info;
 /**
  * <p>
  * <b>Classe</b> Per la gestione della richiesta della statistica 
  * </p>
  * @author Zhang Yihang e Simone Scalella
  * @version 0.9
- * @see univpm.OOP2020.model.FB_page_info
- * @see univpm.OOP2020.model.ALL_post
- * @see univpm.OOP2020.model.page_post
+ * @see univpm.OOP2020.Service.FB_page_info
+ * @see univpm.OOP2020.Service.ALL_post
+ * @see univpm.OOP2020.Model.page_post
  */
 
 public class Statics {
 	/**
 	 * Indica la classe della pagina <code>FB_page_info</code>
-	 * @see univpm.OOP2020.model.FB_page_info
+	 * @see univpm.OOP2020.Service.FB_page_info
 	 */
 	FB_page_info page = null;
 	/**
@@ -87,7 +89,7 @@ public class Statics {
 	 * @param query e' la struttura della condizione del filtro.
 	 * @return <code> Vector page_post  </code> se la condizione di <code> query </code> e' valido
 	 * @throws ResponseStatusException con messaggio d'errore se la condizione di  <code> query </code> e' invalido
-	 * @see univpm.OOP2020.body.request_body
+	 * @see univpm.OOP2020.Body.request_body
 	 */
 	public Object filter_method(request_body query) {
 		

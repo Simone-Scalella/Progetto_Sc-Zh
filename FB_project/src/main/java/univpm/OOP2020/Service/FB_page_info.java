@@ -1,10 +1,10 @@
-package univpm.OOP2020.model;
+package univpm.OOP2020.Service;
 import java.util.Vector;
 import org.springframework.web.client.RestTemplate;
 
 import com.google.gson.Gson;
 
-import univpm.OOP2020.interf.*;
+import univpm.OOP2020.Service.*;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -122,13 +122,10 @@ public class FB_page_info implements Download {
 		JSONArray page_data = GetPage(page_ID,Access_Token,metrics).getJSONArray("data");
 		
 		//popolare il vettore dei valori per rispettivi metriche
-		for(Object metric : page_data) {
-			metric_values.add(((JSONObject)metric).getJSONArray("values").getJSONObject(1).getInt("value"));
-		}		
+		for(Object metric : page_data) {metric_values.add(((JSONObject)metric).getJSONArray("values").getJSONObject(1).getInt("value"));}		
 		Vector<String> metric_Vector =  new Vector<String>(Arrays.asList(metrics_arry));
 		//Costruzione dell'oggetto metric_values partendo da metric_Vector e metric_values
-		JSONObject values_object = new JSONObject();
-		
+		JSONObject values_object = new JSONObject();		
 		for (int i =0;i<metrics_arry.length;i++) {
 			values_object.put(metric_Vector.get(i) , page_data.getJSONObject(i).getJSONArray("values").getJSONObject(1).getInt("value") );
 		}

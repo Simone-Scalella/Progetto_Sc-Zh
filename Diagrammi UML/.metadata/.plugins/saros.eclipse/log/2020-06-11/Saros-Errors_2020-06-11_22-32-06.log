@@ -1,0 +1,24 @@
+WARN  22:32:06,298 [Worker-4] (ConsistencyAction.java:172) watchdog client component is not available, cannot perform inconsistency notification
+ERROR 22:34:06,311 [saros-server-network-watchdog] (ServerSessionTimeoutHandler.java:105) failed to send ping to: zhang_oop2020@saros-con.imp.fu-berlin.de/Saros
+java.io.IOException: not connected to zhang_oop2020@saros-con.imp.fu-berlin.de/Saros [connection identifier=saros-main-session]
+	at saros.net.internal.XMPPTransmitter.send(XMPPTransmitter.java:96)
+	at saros.session.internal.timeout.ServerSessionTimeoutHandler$3.run(ServerSessionTimeoutHandler.java:95)
+	at saros.util.ThreadUtils$1.run(ThreadUtils.java:34)
+	at java.lang.Thread.run(Thread.java:745)
+ERROR 22:35:22,146 [Smack Packet Reader (0)] (XMPPConnectionService.java:104) XMPP connection error: 
+stream:error (conflict) text: Replaced by new connection
+	at org.jivesoftware.smack.PacketReader.parsePackets(PacketReader.java:247)
+	at org.jivesoftware.smack.PacketReader.access$000(PacketReader.java:48)
+	at org.jivesoftware.smack.PacketReader$1.run(PacketReader.java:76)
+ERROR 22:35:22,146 [Smack Packet Reader (0)] (XMPPConnectionService.java:386)  new connection state == ERROR
+stream:error (conflict) text: Replaced by new connection
+	at org.jivesoftware.smack.PacketReader.parsePackets(PacketReader.java:247)
+	at org.jivesoftware.smack.PacketReader.access$000(PacketReader.java:48)
+	at org.jivesoftware.smack.PacketReader$1.run(PacketReader.java:76)
+WARN  22:55:21,213 [Worker-15] (ConsistencyAction.java:172) watchdog client component is not available, cannot perform inconsistency notification
+ERROR 23:23:21,319 [saros-server-network-watchdog] (ServerSessionTimeoutHandler.java:105) failed to send ping to: zhang_oop2020@saros-con.imp.fu-berlin.de/Saros
+java.io.IOException: not connected to zhang_oop2020@saros-con.imp.fu-berlin.de/Saros [connection identifier=saros-main-session]
+	at saros.net.internal.XMPPTransmitter.send(XMPPTransmitter.java:96)
+	at saros.session.internal.timeout.ServerSessionTimeoutHandler$3.run(ServerSessionTimeoutHandler.java:95)
+	at saros.util.ThreadUtils$1.run(ThreadUtils.java:34)
+	at java.lang.Thread.run(Thread.java:745)

@@ -1,12 +1,12 @@
 
-package univpm.OOP2020.model;
+package univpm.OOP2020.Service;
 import java.util.Vector;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.web.client.RestTemplate;
 
-import univpm.OOP2020.interf.Download;
+import univpm.OOP2020.Model.page_post;
 
 /**
  * <p>
@@ -19,7 +19,7 @@ import univpm.OOP2020.interf.Download;
 /**
  * All'interno di questa classe andiamo prendere tutti i post della nostra pagina,
  * implementiamo l'interfaccia Download per usare il metodo get_page
- * @see univpm.OOP2020.interf.Download
+ * @see univpm.OOP2020.Service.Download
  *
  */
 public class ALL_post implements Download{
