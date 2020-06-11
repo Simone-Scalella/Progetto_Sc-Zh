@@ -4,7 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * 
+ * <p>
+ * <b> Classe </b> che contiene il main e avvio della framework Springboot
+ * </p>
  * @author Zhang Yihang & Scalella Simone
  *
  */

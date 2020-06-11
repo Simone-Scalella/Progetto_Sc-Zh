@@ -33,7 +33,8 @@ public class simpleRestController {
 	public ResponseEntity<Object>  Method6(@RequestParam(name="ID_Page",defaultValue="null") String param1,
 										   @RequestParam(name="Access_Token",defaultValue="null") String param2,
 										   @RequestParam(name="Period",defaultValue="days_28") String param3){		
-		if(Statics1.Login(param1, param2, param3)){return new ResponseEntity<> ("Login effettuato con successo", HttpStatus.OK);}
+		if(Statics1.Login(param1, param2, param3))
+		{System.out.println("login success");return new ResponseEntity<> ("Login effettuato con successo", HttpStatus.OK);}
 		else {return new ResponseEntity<> ("Login fallito", HttpStatus.UNAUTHORIZED);}	
 	}
 	/**
@@ -58,7 +59,7 @@ public class simpleRestController {
 	 */
 	@GetMapping("/get_all_post")
 	public Object Method6(){
-		if (Statics1.isLogin()){System.out.println("login success");return Statics1.get_all_Post();}
+		if (Statics1.isLogin()){return Statics1.get_all_Post();}
 		else{return "login required";}
 	}
 	/**

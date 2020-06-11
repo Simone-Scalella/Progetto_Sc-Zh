@@ -23,12 +23,9 @@ import univpm.OOP2020.body.request_body;
 public class Statics {
 	/**
 	 * Indica la classe della pagina <code>FB_page_info</code>
+	 * @see univpm.OOP2020.model.FB_page_info
 	 */
 	FB_page_info page = null;
-	/**
-	 * Indica la classe dell'insieme di post <code>FB_page_info</code>
-	 */
-	ALL_post posts = null;
 	/**
 	 * Indica il vettore dei posts
 	 */
@@ -72,13 +69,11 @@ public class Statics {
 		try {
 			this.Id = Id;
 			this.Access_token =Acess_token;
-			//this.period = period;
 			page = new FB_page_info(Id,Acess_token,period);
-			posts = new ALL_post(Id,Acess_token);
 			Media_click = divide(page.getMetric_Object().getPage_consumptions(),page.getMetric_Object().getPage_consumptions_unique());
 			Media_negativa = divide(page.getMetric_Object().getPage_negative_feedback(),page.getMetric_Object().getPage_negative_feedback_unique());
 		    Media_virale = divide(page.getMetric_Object().getPage_impressions(),page.getMetric_Object().getPage_impressions_unique());
-			Posts_vector = posts.getPosts();
+			Posts_vector = new ALL_post(Id,Acess_token).getPosts();
 			login = true;			
 		}catch (Exception e ){login = false;}
 		
