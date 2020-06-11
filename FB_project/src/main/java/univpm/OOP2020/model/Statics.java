@@ -8,6 +8,9 @@ import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.web.server.ResponseStatusException;
+
 import univpm.OOP2020.body.request_body;
 /**
  * <p>
@@ -83,7 +86,7 @@ public class Statics {
 	/**
 	 * @param query e' la struttura della condizione del filtro.
 	 * @return <code> Vector<page_post> </code> se la condizione di <code> query </code> e' valido
-	 * @return <code> String </code> con messaggio d'errore se la condizione di  <code> query </code> e' invalido
+	 * @exception <code> ResponseStatusException </code> con messaggio d'errore se la condizione di  <code> query </code> e' invalido
 	 * @see univpm.esempio.body.request_body;
 	 */
 	public Object filter_method(request_body query) {
@@ -98,12 +101,12 @@ public class Statics {
 				if((boolean)Script.eval(condition)){Posts_vector_2.add(post);}
 			 }
 		}
-		catch (ScriptException e) 			{return ("Invalid Expression");} 
-		catch (NoSuchMethodException e) 	{return ("No Such Reaction");} 
-		catch (SecurityException e) 		{return ("Access Violation");}
-		catch (IllegalAccessException e) 	{e.printStackTrace();} 
-		catch (IllegalArgumentException e) 	{e.printStackTrace();} 
-		catch (InvocationTargetException e) {e.printStackTrace();}
+		catch (ScriptException e) 			{throw new ResponseStatusException(HttpStatus.BAD_REQUEST,"Invalid Expression");} 
+		catch (NoSuchMethodException e) 	{throw new ResponseStatusException(HttpStatus.BAD_REQUEST,"No Such Reaction");} 
+		catch (SecurityException e) 		{throw new ResponseStatusException(HttpStatus.NOT_ACCEPTABLE,"Access Violation");}
+		catch (IllegalAccessException e) 	{System.out.println("UNEXPECTED BREACH: Illegal Access");e.printStackTrace();} 
+		catch (IllegalArgumentException e) 	{System.out.println("UNEXPECTED BREACH: Illegal Argument");e.printStackTrace();} 
+		catch (InvocationTargetException e) {System.out.println("UNEXPECTED BREACH: Invocation target");e.printStackTrace();}
         System.out.println("filter completed");
         return Posts_vector_2; //Vector<page_post>
 	}
