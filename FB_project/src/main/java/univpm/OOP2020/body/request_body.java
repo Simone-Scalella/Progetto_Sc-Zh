@@ -1,10 +1,10 @@
-package univpm.OOP2020.body;
+package univpm.OOP2020.Body;
 /**
  * <p>
  * <b>Classe</b> che contiene componenti di una semplice espressione logica del filtro
  * </p>
- * @author Zhang Yihang & Scalella Simone
- * @see univpm.OOP2020.model.Statics#filter_method(request_body)
+ * @author Zhang Yihang e Scalella Simone
+ * @see univpm.OOP2020.Model.Statics#filter_method(request_body)
  */
 public class request_body {
 	/**

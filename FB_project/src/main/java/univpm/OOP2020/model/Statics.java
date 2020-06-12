@@ -1,4 +1,4 @@
-package univpm.OOP2020.model;
+package univpm.OOP2020.Model;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -11,40 +11,30 @@ import javax.script.ScriptException;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.server.ResponseStatusException;
 
-import univpm.OOP2020.body.request_body;
+import univpm.OOP2020.Body.request_body;
+import univpm.OOP2020.Service.ALL_post;
+import univpm.OOP2020.Service.FB_page_info;
 /**
  * <p>
  * <b>Classe</b> Per la gestione della richiesta della statistica 
  * </p>
- * @author Zhang Yihang & Simone Scalella
+ * @author Zhang Yihang e Simone Scalella
  * @version 0.9
- * @see univpm.OOP2020.model.FB_page_info
- * @see univpm.OOP2020.model.ALL_post
- * @see univpm.OOP2020.model.page_post
+ * @see univpm.OOP2020.Service.FB_page_info
+ * @see univpm.OOP2020.Service.ALL_post
+ * @see univpm.OOP2020.Model.page_post
  */
 
 public class Statics {
 	/**
 	 * Indica la classe della pagina <code>FB_page_info</code>
-	 * @see univpm.OOP2020.model.FB_page_info
+	 * @see univpm.OOP2020.Service.FB_page_info
 	 */
 	FB_page_info page = null;
 	/**
 	 * Indica il vettore dei posts
 	 */
-	Vector<page_post> Posts_vector = null;
-	/**
-	 * Indica media dei click della pagina
-	 */
-	private float Media_click = 0;
-	/**
-	 * Indica media dei reazione negativa per persona
-	 */
-	private float Media_negativa = 0;
-	/**
-	 * Indica media dell'apparizione della pagina per persona
-	 */
-	private float Media_virale = 0;
+	Vector<page_post> posts_vector = null;
 	/**
 	 * Indica lo stato di login
 	 */
@@ -52,11 +42,11 @@ public class Statics {
 	/**
 	 * Indica Id della pagina
 	 */
-	private String Id = "";
+	private String id = "";
 	/**
 	 * Indica L'Access token della pagina
 	 */
-	private String Access_token = "";
+	private String access_token = "";
 	/**
 	 * Crea la statistica con valori nulli usato solo per inizializzazione
 	 */
@@ -70,13 +60,10 @@ public class Statics {
 	 */	
 	public boolean Login(String Id, String Acess_token, String period) {		
 		try {
-			this.Id = Id;
-			this.Access_token =Acess_token;
+			this.id = Id;
+			this.access_token =Acess_token;
 			page = new FB_page_info(Id,Acess_token,period);
-			Media_click = divide(page.getMetric_Object().getPage_consumptions(),page.getMetric_Object().getPage_consumptions_unique());
-			Media_negativa = divide(page.getMetric_Object().getPage_negative_feedback(),page.getMetric_Object().getPage_negative_feedback_unique());
-		    Media_virale = divide(page.getMetric_Object().getPage_impressions(),page.getMetric_Object().getPage_impressions_unique());
-			Posts_vector = new ALL_post(Id,Acess_token).getPosts();
+			posts_vector = new ALL_post(Id,Acess_token).getPosts();
 			login = true;			
 		}catch (Exception e ){login = false;}
 		
@@ -85,9 +72,9 @@ public class Statics {
 
 	/**
 	 * @param query e' la struttura della condizione del filtro.
-	 * @return <code> Vector<page_post> </code> se la condizione di <code> query </code> e' valido
-	 * @exception <code> ResponseStatusException </code> con messaggio d'errore se la condizione di  <code> query </code> e' invalido
-	 * @see univpm.esempio.body.request_body;
+	 * @return <code> Vector page_post  </code> se la condizione di <code> query </code> e' valido
+	 * @throws ResponseStatusException con messaggio d'errore se la condizione di  <code> query </code> e' invalido
+	 * @see univpm.OOP2020.Body.request_body
 	 */
 	public Object filter_method(request_body query) {
 		
@@ -95,10 +82,10 @@ public class Statics {
 		Vector<page_post> Posts_vector_2 = new Vector<page_post>();
 		try {
 			Method dyn_method = new page_post().getReactions_01().getClass().getMethod(("get"+query.getAttribute()));
-			for(page_post post : Posts_vector){
+			for(page_post post : posts_vector){
 				String impression_total =  ((Integer)dyn_method.invoke(post.getReactions_01())).toString();
 				String condition = impression_total+query.getOperator()+query.getValue();            
-				if((boolean)Script.eval(condition)){Posts_vector_2.add(post);}
+				if((boolean)Script.eval(condition)){Posts_vector_2.add(post);} //Filter with "generi" expression
 			 }
 		}
 		catch (ScriptException e) 			{throw new ResponseStatusException(HttpStatus.BAD_REQUEST,"Invalid Expression");} 
@@ -108,35 +95,29 @@ public class Statics {
 		catch (IllegalArgumentException e) 	{System.out.println("UNEXPECTED BREACH: Illegal Argument");e.printStackTrace();} 
 		catch (InvocationTargetException e) {System.out.println("UNEXPECTED BREACH: Invocation target");e.printStackTrace();}
         System.out.println("filter completed");
-        return Posts_vector_2; //Vector<page_post>
+        return Posts_vector_2; //Vector<page_post> filtered posts
 	}
 	/**
 	 * 
 	 * @return <code> String </code> il consumo medio dei post
 	 */
-	public String consumption_per_post()
-	{return ("consumption_per_post: " + ((float)page.getMetric_Object().getPage_impressions()/(float)Posts_vector.size()));}
+	public String impression_per_post() // impression / number of posts
+	{return ("consumption_per_post: " + ((float)page.getMetric_Object().getPage_impressions()/(float)posts_vector.size()));}
 	/**
 	 * 
 	 * @return <code> String </code> la reazione media per post
 	 */
-	public String average_post_reaction(){
+	public String average_post_reaction(){ // total reaction/ number of posts average reaction
 		int total_reaction = 0;
-		for(page_post post:Posts_vector){total_reaction += post.getReactions_01().gettotal_impression();}
-		return ("average_post_reaction: " + ((float)total_reaction/(float)Posts_vector.size()));
+		for(page_post post:posts_vector){total_reaction += post.getReactions_01().gettotal_impression();}
+		return ("average_post_reaction: " + ((float)total_reaction/(float)posts_vector.size()));
 	}
-	/**
-	 * 
-	 * @param a divisore
-	 * @param b dividendo
-	 * @return <code>float</code> a/b
-	 */
-	private float divide(int a,int b){return (float)a/(float)b;}
+	
 	/**
 	 * Restituisce il vettore di page_post
-	 * @return un <code>Vector<page_post></code> con tutti i posts della pagina
+	 * @return un <code>Vector page_post</code> con tutti i posts della pagina
 	 */
-	public Vector<page_post> get_all_Post() {return Posts_vector;}
+	public Vector<page_post> get_all_Post() {return posts_vector;}
 	/**
 	 * Restituisce lo stato del login
 	 * @return un <code> boolean </code> con lo stato del Login
@@ -149,24 +130,8 @@ public class Statics {
 	public FB_page_info get_page_all() {return page;}
 	/**
 	 * Aggiorna il periodo della metrica Facebook
-	 * @param period l'indica il nuovo periodo che desidera di aggiornare
+	 * @param period <code>String</code> l'indica il nuovo periodo che desidera di aggiornare
 	 */
-	public void Update_period(String period) {this.page = new FB_page_info(Id,Access_token,period);}
-	/**
-	 * Restituisce la media click del contenuto della pagina per persona
-	 * @return un <code>float</code> con media dei click
-	 */
-	public float getMedia_click() {return Media_click;}
-	/**
-	 * Restituisce la media della reazione negativa del contenuto della pagina per persona
-	 * @return un <code>float</code> la media della reazione negativa
-	 */
-	public float getMedia_negativa() {return Media_negativa;}
-	/**
-	 * Restituisce la media della visualizzazione del contenuto della pagina per persona
-	 * @return un <code>float</code> la media della visualizzazione
-	 */
-	public float getMedia_virale() {return Media_virale;}
-	
+	public void Update_period(String period) {this.page = new FB_page_info(id,access_token,period);}
 	
 }
