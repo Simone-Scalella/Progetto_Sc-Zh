@@ -1,12 +1,12 @@
 
-package univpm.OOP2020.Service;
+package univpm.OOP2020.model;
 import java.util.Vector;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.web.client.RestTemplate;
 
-import univpm.OOP2020.Model.page_post;
+import univpm.OOP2020.interf.Download;
 
 /**
  * <p>
@@ -19,7 +19,7 @@ import univpm.OOP2020.Model.page_post;
 /**
  * All'interno di questa classe andiamo prendere tutti i post della nostra pagina,
  * implementiamo l'interfaccia Download per usare il metodo get_page
- * @see univpm.OOP2020.Service.Download
+ * @see univpm.OOP2020.interf.Download
  *
  */
 public class ALL_post implements Download{
@@ -39,8 +39,8 @@ public class ALL_post implements Download{
 	 * Costruttore della classe ALL_post, al suo inerno abbaimo la chiamata al metodo GetPage e tale valore viene assegnato
 	 * a Json_posts di tipo JSONArray,infine un for che scorre tutto il JSONArray e al suo interno aggiungiamo elementi al vettore posts,
 	 * chiamando il costruttore di post_page e passandogli l'oggetto del for
-	 * @param ID <code>String</code> che indica id della pagina
-	 * @param Access_token <code>String</code> che indica Access token di API Facebook
+	 * @param ID
+	 * @param Access_token
 	 */
 	public ALL_post (String ID,String Access_token){
 		JSONArray Json_posts = GetPage(ID,Access_token,this.metrics).getJSONArray("data");
