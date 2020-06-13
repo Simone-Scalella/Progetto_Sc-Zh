@@ -1,23 +1,11 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:FB_project/src/main/java/univpm/OOP2020/Service/FB_page_info.java
 package univpm.OOP2020.Service;
-========
-package univpm.OOP2020.Model;
->>>>>>>> 21883b6d9c07650b08f802be439170a850dfbfcd:FB_project/src/main/java/univpm/OOP2020/model/FB_page_info.java
-=======
-package univpm.OOP2020.Service;
->>>>>>> 21883b6d9c07650b08f802be439170a850dfbfcd
 import java.util.Vector;
 import org.springframework.web.client.RestTemplate;
 
 import com.google.gson.Gson;
 
 import univpm.OOP2020.Model.Metric_values;
-<<<<<<< HEAD
-
-=======
 //import univpm.OOP2020.Service.*;
->>>>>>> 21883b6d9c07650b08f802be439170a850dfbfcd
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -27,7 +15,7 @@ import java.util.Arrays;
  * <p>
  * <b>Class</b> che contiene l'informazioni e i metodi relativa alla pagina
  * </p>
- * @author Zhang Yihang e Simone Scalella
+ * @author Zhang Yihang
  * 
  */
 public class FB_page_info implements Download {

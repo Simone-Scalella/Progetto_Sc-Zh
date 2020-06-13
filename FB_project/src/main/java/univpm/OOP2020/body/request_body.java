@@ -3,7 +3,7 @@ package univpm.OOP2020.Body;
  * <p>
  * <b>Classe</b> che contiene componenti di una semplice espressione logica del filtro
  * </p>
- * @author Zhang Yihang e Scalella Simone
+ * @author Zhang Yihang 
  * @see univpm.OOP2020.Model.Statics#filter_method(request_body)
  */
 public class request_body {

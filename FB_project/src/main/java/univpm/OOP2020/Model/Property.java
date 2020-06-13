@@ -1,7 +1,10 @@
 package univpm.OOP2020.Model;
 
 /**
- * questa classe serve per ricevere l'Id di ogni post dentro la pagina
+ * <p>
+ * <b>Classe</b> che contiene proprieta' principale del post
+ * </p>
+ * @author Zhang Yihang
  */
 public class Property{
 	/**
@@ -14,7 +17,7 @@ public class Property{
 	public Property () {};
 	/**
 	 * 
-	 * @return questo e' il metodo getter per utilizzare l'attributo private Id
+	 * @return un <code> String </code> che contiene id del post
 	 */
 	public String getId() {return id;}
 	

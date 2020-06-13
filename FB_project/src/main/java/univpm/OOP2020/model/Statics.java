@@ -18,8 +18,7 @@ import univpm.OOP2020.Service.FB_page_info;
  * <p>
  * <b>Classe</b> Per la gestione della richiesta della statistica 
  * </p>
- * @author Zhang Yihang e Simone Scalella
- * @version 0.9
+ * @author Zhang Yihang
  * @see univpm.OOP2020.Service.FB_page_info
  * @see univpm.OOP2020.Service.ALL_post
  * @see univpm.OOP2020.Model.page_post
@@ -102,7 +101,7 @@ public class Statics {
 	 * @return <code> String </code> il consumo medio dei post
 	 */
 	public String impression_per_post() // impression / number of posts
-	{return ("consumption_per_post: " + ((float)page.getMetric_Object().getPage_impressions()/(float)posts_vector.size()));}
+	{return ("impression_per_post: " + ((float)page.getMetric_Object().getPage_impressions()/(float)posts_vector.size()));}
 	/**
 	 * 
 	 * @return <code> String </code> la reazione media per post

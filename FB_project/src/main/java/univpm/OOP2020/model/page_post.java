@@ -8,18 +8,11 @@ import com.google.gson.Gson;
  * <p>
  * <b>Classe</b> Per la gestione della richiesta dati di un post
  * </p> 
- * @author Zhang Yihang e Simone Scalella
- * @version 0.9
+ * @author Simone Scalella
  * @see univpm.OOP2020.Model.page_post
  */
 
 public class page_post  {
-
-	/**
-	 * 
-	 * Classe che contiene tutte le possibili reazioni ai post
-	 *
-	 */
 	
 	/**
 	 * viene istanziato un oggetto della classe Reaction che si chiama reaction_01
@@ -57,15 +50,15 @@ public class page_post  {
 	 */
 	public page_post() {};	
 	/**
-	 * @return metodo getter che restituisce un oggetto della classe reaction 
+	 * @return un <code> Reaction </code> che contiene reaction del post 
 	 */
 	public Reactions getReactions_01() {return Reactions_01;}
 	/**
-	 * @return metodo getter che restituisce un oggetto della classe Impression 
+	 * @return <code> Impression </code> metodo getter che restituisce un oggetto della classe Impression 
 	 */
 	public Impression getImpression_01() {return Impression_01;}
 	/**
-	 * @return metodo getter che restituisce un oggetto della classe property 
+	 * @return <code> Property </code>  metodo getter che restituisce un oggetto della classe property 
 	 */
 	public Property getProperty_01() {return property_01;}	
 }

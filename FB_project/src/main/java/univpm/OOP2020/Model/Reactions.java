@@ -1,5 +1,11 @@
 package univpm.OOP2020.Model;
-
+/**
+ * <p>
+ * <b>Classe</b> che contiene le reazioni del post
+ * </p>
+ * @author Scallela Simone
+ *
+ */
 public class Reactions{
 	/**
 	 * attributo per i like 
@@ -34,27 +40,27 @@ public class Reactions{
 	 */
 	public void update(){total_impression = like+wow+love+care+haha;}
 	/**
-	 * @return metodo getter per like
+	 * @return <code> int </code>  metodo getter per like
 	 */
 	public int getlike() {return like;}
 	/**
-	 * @return metodo getter per wow
+	 * @return <code> int </code> metodo getter per wow
 	 */
 	public int getwow() {return wow;}
 	/**
-	 * @return metodo getter per love
+	 * @return <code> int </code> metodo getter per love
 	 */
 	public int getlove() {return love;}	
 	/**
-	 * @return metodo getter per care
+	 * @return <code> int </code> metodo getter per care
 	 */
 	public int getcare(){return care;}
 	/**
-	 * @return metodo getter per haha
+	 * @return <code> int </code> metodo getter per haha
 	 */
 	public int gethaha() {return haha;}
 	/**
-	 * @return metodo getter per total_impression
+	 * @return <code> int </code> metodo getter per total_impression
 	 */
 	public int gettotal_impression() {return total_impression;}
 	

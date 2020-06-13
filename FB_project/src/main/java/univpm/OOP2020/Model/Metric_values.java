@@ -1,5 +1,12 @@
 package univpm.OOP2020.Model;
-
+/**
+ * <p>
+ * <b>Classe</b> che contiene i valori delle metriche
+ * </p>
+ * @author Zhang Yihang
+ * 
+ *
+ */
 public class Metric_values {
 	/**
 	 * attributo privato relativo alla metric page_consumptions
@@ -46,31 +53,31 @@ public class Metric_values {
 	 */
 	public Metric_values() {}
     /**
-     * @return metodo getters che restituisce l'attributo privato page_consumptions
+     * @return un <code> Integer</code> che contiene consumo della pagina
      */
 	public Integer getPage_consumptions() {return page_consumptions;}
     /**
-     * @return metodo getters che restituisce l'attributo privato page_consumptions_unique
+     * @return un <code> Integer</code> che contiene consumo unico della pagina
      */
 	public Integer getPage_consumptions_unique() {return page_consumptions_unique;}
     /**
-     * @return metodo getters che restituisce l'attributo privato page_negative_feedback
+     * @return un <code> Integer</code> che contiene consumo della pagina
      */
 	public Integer getPage_negative_feedback() {return page_negative_feedback;}
     /**
-     * @return metodo getters che restituisce l'attributo privato page_negative_feedback_unique
+     * @return un <code> Integer</code> che contiene feedback negativa unica della pagina
      */
 	public Integer getPage_negative_feedback_unique() {return page_negative_feedback_unique;}
     /**
-     * @return metodo getters che restituisce l'attributo privato page_impressions
+     * @return un <code> Integer</code> che contiene impressione della pagina
      */
 	public Integer getPage_impressions() {return page_impressions;}
     /**
-     * @return metodo getters che restituisce l'attributo privato page_impressions_unique
+     * @return un <code> Integer</code> che contiene impressione unico della pagina
      */
 	public Integer getPage_impressions_unique() {return page_impressions_unique;}
     /**
-     * @return metodo getters che restituisce l'attributo privato page_fan_adds_unique
+     * @return un <code> Integer</code> che contiene numero di fan della pagina
      */
 	public Integer getPage_fan_adds_unique() {return page_fan_adds_unique;};
 	/**

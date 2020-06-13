@@ -1,9 +1,10 @@
 package univpm.OOP2020.Model;
 
 /**
- * 
- * all'interno di questa classe vengono salvati alcuni dati del post specificati di seguito 
- *
+ * <p>
+ * <b>Classe</b> classe vengono salvati dati dell'impressione (del post)
+ * </p>
+ * @author Scallela Simone
  */
 
 public class Impression{
@@ -29,7 +30,7 @@ public class Impression{
 	public void update() {impressions_per_person = (float)impressions/(float)unique_impression;}
 	/**
 	 * 
-	 * @return metodo getter che ci restituisce l'attributo privato impressions
+	 * @return <code> int </code> metodo getter che ci restituisce l'attributo privato impressions
 	 */
 	public int getImpressions() {return impressions;}
 	/**
@@ -39,7 +40,7 @@ public class Impression{
 	public void setImpression(int impression) {this.impressions = impression;}
 	/**
 	 * 
-	 * @return metodo che ci restituisce l'attributo privato unique_impression
+	 * @return un <code>int</code> che contiene l'attributo unique_impression
 	 */
 	public int getUnique_impression() {return unique_impression;}
 	/**
@@ -49,7 +50,7 @@ public class Impression{
 	public void setImpression_unique(int unique_impression) {this.unique_impression = unique_impression;}
 	/**
 	 * 
-	 * @return metodo che ci restituisce l'attributo privato Impressions_per_person
+	 * @return un <code> float </code>  metodo che ci restituisce l'attributo privato Impressions_per_person
 	 */
 	public float getImpressions_per_person() {return impressions_per_person;}
 	

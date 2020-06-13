@@ -10,17 +10,11 @@ import univpm.OOP2020.Model.page_post;
 
 /**
  * <p>
- * <b>Classe</b> Per la gestione della richiesta dati di un post
- * </p> 
- * @author Zhang Yihang & Simone Scalella
- * @version 0.9
- * @see univpm.OOP2020.model.ALL_post
- */
-/**
- * All'interno di questa classe andiamo prendere tutti i post della nostra pagina,
+ * <b>Classe</b> Per la gestione della richiesta dati di un post all'interno di questa classe andiamo prendere tutti i post della nostra pagina,
  * implementiamo l'interfaccia Download per usare il metodo get_page
+ * </p> 
+ * @author Simone Scalella
  * @see univpm.OOP2020.Service.Download
- *
  */
 public class ALL_post implements Download{
 	/**

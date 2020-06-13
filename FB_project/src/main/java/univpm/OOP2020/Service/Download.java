@@ -5,6 +5,7 @@ import org.json.JSONObject;
  * <p>
  * <b>Interfaccia</b> che contiene il metodo condiviso tra post e page 
  * </p>
+ * @author Scalella Simone
  * @see univpm.OOP2020.Service.ALL_post
  * @see univpm.OOP2020.Service.FB_page_info
  */

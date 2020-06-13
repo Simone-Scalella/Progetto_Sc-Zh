@@ -15,9 +15,8 @@ import univpm.OOP2020.Model.Statics;
 /**<p>
  * <b>Classe</b> tra cui l'utente interagisce con l'applicazione tramite i Mapping
  *</p>
- * @author Zhang Yihang e Simone Scalella 
+ * @author Zhang Yihang
  * @see univpm.OOP2020.Model.Statics
- * qualcosa
  */
 @RestController
 public class simpleRestController {

@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"univpm.OOP2020.App"},{"l":"univpm.OOP2020.App.controller"},{"l":"univpm.OOP2020.Body"},{"l":"univpm.OOP2020.demo"},{"l":"univpm.OOP2020.Model"},{"l":"univpm.OOP2020.Service"},{"l":"univpm.OOP2020.Test"}]
