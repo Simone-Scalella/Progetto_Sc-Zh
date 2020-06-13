@@ -1,2 +1,0 @@
-WARN  17:33:50,426 [Smack Listener Processor (0)] (SubscriptionHandler.java:128) received error presence package from saros_801065714@conference.saros-con.imp.fu-berlin.de/zhang_laptopoop@saros-con.imp.fu-berlin.de/Saros, condition: not-authorized, message: A password is required to enter this room
-WARN  17:33:53,861 [pool-8-thread-1] (Socks5StreamService.java:329) [SOCKS5Transport] Received response connection without a running connect

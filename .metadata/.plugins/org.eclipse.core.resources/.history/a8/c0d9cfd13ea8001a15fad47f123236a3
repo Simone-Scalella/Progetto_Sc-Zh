@@ -1,9 +1,0 @@
-package univpm.esempio.model;
-
-import java.util.Vector;
-
-import univpm.esempio.interf.Download;
-
-public class ALL_post implements Download{
-	private Vector<page_post> posts = new Vector();
-}

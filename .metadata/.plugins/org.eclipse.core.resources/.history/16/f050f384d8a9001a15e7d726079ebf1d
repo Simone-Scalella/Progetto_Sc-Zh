@@ -1,8 +1,0 @@
-package univpm.esempio.model;
-
-public class request_body {
-	
-	private String param1 = "";
-	
-	public request_body() {};
-}

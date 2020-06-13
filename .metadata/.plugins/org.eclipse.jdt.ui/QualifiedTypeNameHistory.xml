@@ -1,14 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="org.springframework.web.client.RestTemplate"/>
-<fullyQualifiedTypeName name="com.fasterxml.jackson.databind.ObjectMapper"/>
-<fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="org.json.simple.JSONArray"/>
-<fullyQualifiedTypeName name="org.json.simple.JSONObject"/>
-<fullyQualifiedTypeName name="org.json.JSONObject"/>
-<fullyQualifiedTypeName name="org.json.JSONArray"/>
-<fullyQualifiedTypeName name="univpm.esempio.demo.FB_page_info"/>
-<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
-<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
-<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
-</qualifiedTypeNameHistroy>
+<qualifiedTypeNameHistroy/>

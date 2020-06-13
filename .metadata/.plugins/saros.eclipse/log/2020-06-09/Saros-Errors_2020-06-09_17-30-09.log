@@ -1,1 +1,0 @@
-WARN  17:30:09,601 [ModalContext] (AddContactUtility.java:87) Problem while adding a contact.CancellationException User decided to add contact anyway. Problem: service-unavailable(503)

@@ -1,3 +1,0 @@
-WARN  22:55:18,236 [Smack Listener Processor (0)] (SubscriptionHandler.java:128) received error presence package from saros_215249103@conference.saros-con.imp.fu-berlin.de/zhang_oop2020@saros-con.imp.fu-berlin.de/Saros, condition: not-authorized, message: A password is required to enter this room
-WARN  23:16:52,986 [main] (TextEditActivity.java:312) NoOp Text edit: new '' old ''
-WARN  00:05:48,750 [main] (UserEditorState.java:71) received selection for editor which was never activated: SPath [project=P/FBdemo (EclipseProjectImpl), projectRelativePath=src/main/java/univpm/esempio/App/DemoApplication.java]
