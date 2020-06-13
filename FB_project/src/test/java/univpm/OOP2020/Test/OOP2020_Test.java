@@ -1,6 +1,10 @@
 package univpm.OOP2020.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
+<<<<<<< HEAD
+=======
+import org.junit.jupiter.api.AfterEach;
+>>>>>>> 21883b6d9c07650b08f802be439170a850dfbfcd
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -18,11 +22,19 @@ class OOP_2020_Test {
 	/**
 	 * attributo privato necessario per il test
 	 */
+<<<<<<< HEAD
 	private String Access_Token = "EAAj9pRhdt7cBADoFODHvJhLjqnMdEZCKaz8ORVjZCUmdL0uubCSjjykBSAc2ZANdVoOO5ilUcW8Hd03NlefWTvQlgPjDeSNcsizn5dvhGaTgPiwLZCXDGOVdkL1CORzryXatEQEc1i38mR9og5ohFSf4iy8dqysyMcRsk3tsDAZDZD";
 	/**
 	 * attributo privato necessario per il test
 	 */
 	private String Id = "112228053835001";
+=======
+	private String access_token = "EAAj9pRhdt7cBADoFODHvJhLjqnMdEZCKaz8ORVjZCUmdL0uubCSjjykBSAc2ZANdVoOO5ilUcW8Hd03NlefWTvQlgPjDeSNcsizn5dvhGaTgPiwLZCXDGOVdkL1CORzryXatEQEc1i38mR9og5ohFSf4iy8dqysyMcRsk3tsDAZDZD";
+	/**
+	 * attributo privato necessario per il test
+	 */
+	private String id = "112228053835001";
+>>>>>>> 21883b6d9c07650b08f802be439170a850dfbfcd
 	/**
 	 * attributo privato necessario per il test
 	 */
@@ -41,7 +53,11 @@ class OOP_2020_Test {
       */
 	@BeforeEach
 	void setUp() throws Exception {
+<<<<<<< HEAD
 	     test_page = new FB_page_info(Id,Access_Token,period);
+=======
+	     test_page = new FB_page_info(id,access_token,period);
+>>>>>>> 21883b6d9c07650b08f802be439170a850dfbfcd
 	     test_login = new Statics();
 	}
 
@@ -58,7 +74,11 @@ class OOP_2020_Test {
 	 */
 	@Test
 	void test2() {
+<<<<<<< HEAD
 		assertEquals(true,test_login.Login(Id,Access_Token, period));
+=======
+		assertEquals(true,test_login.Login(id,access_token, period));
+>>>>>>> 21883b6d9c07650b08f802be439170a850dfbfcd
 	}
 
 }
