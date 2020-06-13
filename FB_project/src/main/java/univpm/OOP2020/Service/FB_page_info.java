@@ -4,7 +4,8 @@ import org.springframework.web.client.RestTemplate;
 
 import com.google.gson.Gson;
 
-import univpm.OOP2020.Service.*;
+import univpm.OOP2020.Model.Metric_values;
+
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -22,7 +23,7 @@ public class FB_page_info implements Download {
 	/**
 	 * indica ID della pagina
 	 */
-	private String ID ="";
+	private String id ="";
 	/**
 	 * indica il periodo dei dati
 	 */
@@ -40,73 +41,11 @@ public class FB_page_info implements Download {
 	 * @author Zhang Yihang e Scalella Simone
 	 *
 	 */
-	public class metric_values {
-		/**
-		 * attributo privato relativo alla metric page_consumptions
-		 */
-		private Integer page_consumptions = null;
-		/**
-		 * attributo privato relativo alla metric page_consumptions_unique
-		 */
-		private Integer page_consumptions_unique = null;
-		/**
-		 * attributo privato relativo alla metric page_negative_feedback
-		 */
-		private Integer page_negative_feedback = null;
-		/**
-		 * attributo privato relativo alla metric page_negative_feedback_unique
-		 */
-		private Integer page_negative_feedback_unique= null;
-		/**
-		 * attributo privato relativo alla metric page_impressions
-		 */
-		private Integer page_impressions = null;
-		/**
-		 * attributo privato relativo alla page_impressions_unique
-		 */
-		private Integer page_impressions_unique = null;
-		/**
-		 * attributo privato relativo alla page_fan_adds_unique
-		 */
-		private Integer page_fan_adds_unique = null;
-		/**
-		 * costruttore vuoto della classe metric_values
-		 */
-		public metric_values() {}
-        /**
-         * @return metodo getters che restituisce l'attributo privato page_consumptions
-         */
-		public Integer getPage_consumptions() {return page_consumptions;}
-        /**
-         * @return metodo getters che restituisce l'attributo privato page_consumptions_unique
-         */
-		public Integer getPage_consumptions_unique() {return page_consumptions_unique;}
-        /**
-         * @return metodo getters che restituisce l'attributo privato page_negative_feedback
-         */
-		public Integer getPage_negative_feedback() {return page_negative_feedback;}
-        /**
-         * @return metodo getters che restituisce l'attributo privato page_negative_feedback_unique
-         */
-		public Integer getPage_negative_feedback_unique() {return page_negative_feedback_unique;}
-        /**
-         * @return metodo getters che restituisce l'attributo privato page_impressions
-         */
-		public Integer getPage_impressions() {return page_impressions;}
-        /**
-         * @return metodo getters che restituisce l'attributo privato page_impressions_unique
-         */
-		public Integer getPage_impressions_unique() {return page_impressions_unique;}
-        /**
-         * @return metodo getters che restituisce l'attributo privato page_fan_adds_unique
-         */
-		public Integer getPage_fan_adds_unique() {return page_fan_adds_unique;};
-		
-	}
+	
 	/**
 	 * Indicano Oggetti delle metriche dove vengono salvati i valori delle metriche
 	 */
-	private metric_values metric_Object = new metric_values(); //inizializzazione
+	private Metric_values metric_Object = new Metric_values(); //inizializzazione
 	/**
 	 * Costruisce la pagina tramite API Facebook con dati forniti dall'utente 
 	 * @param page_ID <code>String</code>  indica Id della pagina da cui acquisire le informazioni tramite API Facebook
@@ -116,7 +55,7 @@ public class FB_page_info implements Download {
 	 */
 	public FB_page_info(String page_ID,String Access_Token,String period) {
 		
-		this.ID = page_ID;
+		this.id = page_ID;
 		this.period = period;	
 		String metrics = String.join(",", metrics_arry);
 		JSONArray page_data = GetPage(page_ID,Access_Token,metrics).getJSONArray("data");
@@ -129,10 +68,11 @@ public class FB_page_info implements Download {
 		for (int i =0;i<metrics_arry.length;i++) {
 			values_object.put(metric_Vector.get(i) , page_data.getJSONObject(i).getJSONArray("values").getJSONObject(1).getInt("value") );
 		}
-		metric_Object = new Gson().fromJson(values_object.toString(),metric_values.class);
+		metric_Object = new Gson().fromJson(values_object.toString(),Metric_values.class);
+	    metric_Object.setMedia_click(divide(this.getMetric_Object().getPage_consumptions(),this.getMetric_Object().getPage_consumptions_unique()));
+		metric_Object.setMedia_negativa(divide(this.getMetric_Object().getPage_negative_feedback(),this.getMetric_Object().getPage_negative_feedback_unique()));
+	    metric_Object.setMedia_virale(divide(this.getMetric_Object().getPage_impressions(),this.getMetric_Object().getPage_impressions_unique())); 
 	}
-	
-	
 	
 		/**
 		 * Restituisce i dati primitivi dalla pagina tramite API Facebook con dati forniti dall'utente 
@@ -150,7 +90,7 @@ public class FB_page_info implements Download {
 		 * Restituisce Id della pagina
 		 * @return <code>String</code> che contiene ID della pagina
 		 */
-		public String getID() {	return ID;}	
+		public String getID() {	return id;}	
 		/**
 		 * Restituisce il periodo in cui i dati della pagina sono ottenuti 
 		 * @return <code>String</code> che contiene il periodo
@@ -160,6 +100,13 @@ public class FB_page_info implements Download {
 		 * Restituisce l'oggetto che contiene insieme delle metriche e i rispettivi valori
 		 * @return <code>metri_value</code> che contiene metriche e i rispettivi valori
 		 */
-		public metric_values getMetric_Object() {return metric_Object;}		
+		public Metric_values getMetric_Object() {return metric_Object;}	
+		/**
+		 * 
+		 * @param a divisore
+		 * @param b dividendo
+		 * @return <code>float</code> a/b
+		 */
+		private float divide(int a,int b){return (float)a/(float)b;}
 		
 }

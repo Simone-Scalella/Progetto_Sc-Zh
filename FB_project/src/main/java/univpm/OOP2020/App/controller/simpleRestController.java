@@ -96,11 +96,11 @@ public class simpleRestController {
 	 * Mapping "/consumption_per_post" ci restituisce informazione del consumo medio del post della pagina
 	 * @throws ResponseStatusException se non e' effettuato login
 	 * @return <code>String</code> che contiene il valore dalla richiesta
-	 * @see univpm.OOP2020.Model.Statics#consumption_per_post()
+	 * @see univpm.OOP2020.Model.Statics#impression_per_post()
 	 */
-	@GetMapping("/consumption_per_post")
+	@GetMapping("/impression_per_post")
 	public String Method9(){
-		if (Statics1.isLogin()){return Statics1.consumption_per_post();}
+		if (Statics1.isLogin()){return Statics1.impression_per_post();}
 		else {throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "login required");}
 	}
 	/**
