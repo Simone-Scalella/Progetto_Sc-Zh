@@ -1,0 +1,5 @@
+package univpm.esempio.model;
+
+public class JSONerror {
+
+}

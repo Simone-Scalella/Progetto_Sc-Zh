@@ -1,0 +1,24 @@
+package univpm.esempio.model;
+
+public class request_body {
+	
+	private String operator = null;
+	private String value = null;	
+	private String attribute = null;
+	
+	public request_body() {};
+	
+	public String getOperator() {
+		return operator;
+	}
+
+	public String getValue() {
+		return value;
+	}
+
+	public String getAttribute() {
+		return attribute;
+	}	
+	
+	
+}

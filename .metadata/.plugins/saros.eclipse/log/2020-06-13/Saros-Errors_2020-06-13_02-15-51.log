@@ -1,0 +1,2 @@
+WARN  02:15:51,902 [Smack Listener Processor (0)] (SubscriptionHandler.java:128) received error presence package from saros_597685191@conference.saros-con.imp.fu-berlin.de/zhang_oop2020@saros-con.imp.fu-berlin.de/Saros, condition: not-authorized, message: A password is required to enter this room
+ERROR 02:16:20,614 [pool-9-thread-1] (Socks5StreamService.java:340) [SOCKS5Transport] Wrapping bidirectional stream timed out in Request! Shouldn't have happened.

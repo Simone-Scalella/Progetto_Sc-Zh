@@ -1,0 +1,3 @@
+WARN  17:58:51,619 [Smack Listener Processor (0)] (SubscriptionHandler.java:128) received error presence package from saros_1483149611@conference.saros-con.imp.fu-berlin.de/zhang_oop2020@saros-con.imp.fu-berlin.de/Saros, condition: not-authorized, message: A password is required to enter this room
+WARN  18:56:21,205 [main] (TextEditActivity.java:312) NoOp Text edit: new '' old ''
+ERROR 20:07:04,499 [saros-client-network-watchdog] (ClientSessionTimeoutHandler.java:77) no ping received, reached timeout = 300000

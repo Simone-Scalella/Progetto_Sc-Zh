@@ -1,0 +1,9 @@
+package univpm.esempio.model;
+
+public class request_body {
+	
+	private String param1 = "";
+	int param2 = 0;
+	public request_body() {};
+	
+}

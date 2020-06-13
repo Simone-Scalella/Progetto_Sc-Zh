@@ -1,0 +1,23 @@
+INFO  02:05:05,793 [saros-DispatchContext] (NegotiationPacketListener.java:227) Starting Saros 16.0.1 running:
+  Java Version: 1.8.0_231
+  Java Vendor: Oracle Corporation
+  Eclipse Runtime Version: 3.17.100.v20200203-0917
+  Operating System: Windows 10 (10.0)
+  Hardware Architecture: amd64
+INFO  02:05:05,814 [saros-DispatchContext] (NegotiationPacketListener.java:227) initializing context...
+INFO  02:05:06,426 [saros-DispatchContext] (NegotiationPacketListener.java:227) initializing preference default values
+INFO  02:05:06,461 [saros-DispatchContext] (NegotiationPacketListener.java:227) successfully initialized context
+INFO  02:15:45,519 [saros-DispatchContext] (NegotiationPacketListener.java:227) received invitation from zhang_laptopoop@saros-con.imp.fu-berlin.de/Saros [negotiation id: -511230703555714161, session id: 597685191, version: 16.0.1]
+INFO  02:15:47,404 [ModalContext] (SarosSessionManager.java:288) joined uninitialized Saros session
+INFO  02:15:47,404 [ModalContext] (DataTransferManager.java:269) establishing connection to zhang_laptopoop@saros-con.imp.fu-berlin.de/Saros from zhang_oop2020@saros-con.imp.fu-berlin.de/Saros using stream service XMPP-Socks5-Stream-Service
+WARN  02:15:51,902 [Smack Listener Processor (0)] (SubscriptionHandler.java:128) received error presence package from saros_597685191@conference.saros-con.imp.fu-berlin.de/zhang_oop2020@saros-con.imp.fu-berlin.de/Saros, condition: not-authorized, message: A password is required to enter this room
+DEBUG 02:15:52,003 [Smack Listener Processor (0)] (MultiUserChatStateManager.java:98) Incoming Message from saros_597685191@conference.saros-con.imp.fu-berlin.de/zhang_laptopoop@saros-con.imp.fu-berlin.de/Saros with state: active
+DEBUG 02:15:52,219 [Smack Listener Processor (0)] (MultiUserChatStateManager.java:98) Incoming Message from saros_597685191@conference.saros-con.imp.fu-berlin.de/zhang_oop2020@saros-con.imp.fu-berlin.de/Saros with state: active
+INFO  02:15:52,321 [saros-DispatchContext] (NegotiationPacketListener.java:310) received project negotiation from zhang_laptopoop@saros-con.imp.fu-berlin.de/Saros with negotiation id: 5995185885851625177
+INFO  02:15:59,187 [saros-DispatchContext] (SarosSession.java:389) user zhang_laptopoop@saros-con.imp.fu-berlin.de/Saros now has Projects and can process IResourceActivities
+ERROR 02:16:20,614 [pool-9-thread-1] (Socks5StreamService.java:340) [SOCKS5Transport] Wrapping bidirectional stream timed out in Request! Shouldn't have happened.
+INFO  02:16:35,397 [main] (ConsistencyWatchdogClient.java:344) Inconsistencies have been detected
+INFO  02:16:35,834 [saros-shutdown] (SarosSessionManager.java:332) session stopped
+INFO  02:16:36,139 [saros-shutdown] (ContainerContext.java:205) disposing context...
+INFO  02:16:36,140 [saros-shutdown] (ContainerContext.java:209) successfully disposed context
+INFO  02:16:36,245 [Framework stop] (Saros.java:137) Stopping Saros 16.0.1

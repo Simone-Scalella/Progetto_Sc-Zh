@@ -1,0 +1,7 @@
+package univpm.esempio.model;
+
+public class request_body {
+
+	
+	public request_body() {};
+}

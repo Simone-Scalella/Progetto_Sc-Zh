@@ -1,0 +1,46 @@
+INFO  17:33:09,605 [saros-DispatchContext] (NegotiationPacketListener.java:227) Starting Saros 16.0.1 running:
+  Java Version: 1.8.0_251
+  Java Vendor: Oracle Corporation
+  Eclipse Runtime Version: 3.17.100.v20200203-0917
+  Operating System: Windows 10 (10.0)
+  Hardware Architecture: amd64
+INFO  17:33:09,625 [saros-DispatchContext] (NegotiationPacketListener.java:227) initializing context...
+INFO  17:33:10,121 [saros-DispatchContext] (NegotiationPacketListener.java:227) initializing preference default values
+INFO  17:33:10,151 [saros-DispatchContext] (NegotiationPacketListener.java:227) successfully initialized context
+INFO  17:33:44,276 [saros-DispatchContext] (NegotiationPacketListener.java:227) received invitation from zhang_oop2020@saros-con.imp.fu-berlin.de/Saros [negotiation id: 4088919971545938874, session id: 801065714, version: 16.0.1]
+INFO  17:33:48,107 [ModalContext] (SarosSessionManager.java:288) joined uninitialized Saros session
+INFO  17:33:48,108 [ModalContext] (DataTransferManager.java:269) establishing connection to zhang_oop2020@saros-con.imp.fu-berlin.de/Saros from zhang_laptopoop@saros-con.imp.fu-berlin.de/Saros using stream service XMPP-Socks5-Stream-Service
+WARN  17:33:50,426 [Smack Listener Processor (0)] (SubscriptionHandler.java:128) received error presence package from saros_801065714@conference.saros-con.imp.fu-berlin.de/zhang_laptopoop@saros-con.imp.fu-berlin.de/Saros, condition: not-authorized, message: A password is required to enter this room
+INFO  17:33:50,707 [saros-DispatchContext] (NegotiationPacketListener.java:310) received project negotiation from zhang_oop2020@saros-con.imp.fu-berlin.de/Saros with negotiation id: 1567028208619551761
+DEBUG 17:33:51,599 [Smack Listener Processor (0)] (MultiUserChatStateManager.java:98) Incoming Message from saros_801065714@conference.saros-con.imp.fu-berlin.de/zhang_oop2020@saros-con.imp.fu-berlin.de/Saros with state: active
+DEBUG 17:33:51,813 [Smack Listener Processor (0)] (MultiUserChatStateManager.java:98) Incoming Message from saros_801065714@conference.saros-con.imp.fu-berlin.de/zhang_laptopoop@saros-con.imp.fu-berlin.de/Saros with state: active
+WARN  17:33:53,861 [pool-8-thread-1] (Socks5StreamService.java:329) [SOCKS5Transport] Received response connection without a running connect
+INFO  17:35:04,196 [saros-DispatchContext] (SarosSession.java:389) user zhang_oop2020@saros-con.imp.fu-berlin.de/Saros now has Projects and can process IResourceActivities
+INFO  17:35:11,419 [saros-DispatchContext] (SarosSession.java:354) user oop_scal@saros-con.imp.fu-berlin.de/Saros joined session
+DEBUG 17:35:11,774 [Smack Listener Processor (0)] (MultiUserChatStateManager.java:98) Incoming Message from saros_801065714@conference.saros-con.imp.fu-berlin.de/oop_scal@saros-con.imp.fu-berlin.de/Saros with state: active
+INFO  17:35:30,729 [saros-DispatchContext] (SarosSession.java:389) user zhang_oop2020@saros-con.imp.fu-berlin.de/Saros now has Projects and can process IResourceActivities
+INFO  20:38:05,434 [saros-DispatchContext] (SarosSession.java:468) user oop_scal@saros-con.imp.fu-berlin.de/Saros left session
+INFO  22:04:10,741 [saros-DispatchContext] (SarosSession.java:354) user oop_scal@saros-con.imp.fu-berlin.de/Saros joined session
+DEBUG 22:04:11,186 [Smack Listener Processor (0)] (MultiUserChatStateManager.java:98) Incoming Message from saros_801065714@conference.saros-con.imp.fu-berlin.de/oop_scal@saros-con.imp.fu-berlin.de/Saros with state: active
+INFO  22:04:52,032 [saros-DispatchContext] (SarosSession.java:389) user zhang_oop2020@saros-con.imp.fu-berlin.de/Saros now has Projects and can process IResourceActivities
+DEBUG 23:07:35,787 [Smack Listener Processor (0)] (MultiUserChatStateManager.java:98) Incoming Message from saros_801065714@conference.saros-con.imp.fu-berlin.de/zhang_laptopoop@saros-con.imp.fu-berlin.de/Saros with state: composing
+DEBUG 23:07:36,539 [Smack Listener Processor (0)] (MultiUserChatStateManager.java:98) Incoming Message from saros_801065714@conference.saros-con.imp.fu-berlin.de/zhang_laptopoop@saros-con.imp.fu-berlin.de/Saros with state: inactive
+DEBUG 23:08:01,147 [Smack Listener Processor (0)] (MultiUserChatStateManager.java:98) Incoming Message from saros_801065714@conference.saros-con.imp.fu-berlin.de/zhang_laptopoop@saros-con.imp.fu-berlin.de/Saros with state: composing
+DEBUG 23:08:01,324 [Smack Listener Processor (0)] (MultiUserChatStateManager.java:98) Incoming Message from saros_801065714@conference.saros-con.imp.fu-berlin.de/oop_scal@saros-con.imp.fu-berlin.de/Saros with state: composing
+DEBUG 23:08:02,032 [Smack Listener Processor (0)] (MultiUserChatStateManager.java:98) Incoming Message from saros_801065714@conference.saros-con.imp.fu-berlin.de/oop_scal@saros-con.imp.fu-berlin.de/Saros with state: inactive
+DEBUG 23:08:02,121 [Smack Listener Processor (0)] (MultiUserChatStateManager.java:98) Incoming Message from saros_801065714@conference.saros-con.imp.fu-berlin.de/zhang_laptopoop@saros-con.imp.fu-berlin.de/Saros with state: inactive
+DEBUG 23:11:24,456 [Smack Listener Processor (0)] (MultiUserChatStateManager.java:98) Incoming Message from saros_801065714@conference.saros-con.imp.fu-berlin.de/zhang_laptopoop@saros-con.imp.fu-berlin.de/Saros with state: composing
+DEBUG 23:11:24,874 [Smack Listener Processor (0)] (MultiUserChatStateManager.java:98) Incoming Message from saros_801065714@conference.saros-con.imp.fu-berlin.de/zhang_laptopoop@saros-con.imp.fu-berlin.de/Saros with state: inactive
+DEBUG 23:11:57,427 [Smack Listener Processor (0)] (MultiUserChatStateManager.java:98) Incoming Message from saros_801065714@conference.saros-con.imp.fu-berlin.de/zhang_laptopoop@saros-con.imp.fu-berlin.de/Saros with state: composing
+DEBUG 23:11:57,620 [Smack Listener Processor (0)] (MultiUserChatStateManager.java:98) Incoming Message from saros_801065714@conference.saros-con.imp.fu-berlin.de/zhang_laptopoop@saros-con.imp.fu-berlin.de/Saros with state: inactive
+DEBUG 00:10:58,544 [Smack Listener Processor (0)] (MultiUserChatStateManager.java:98) Incoming Message from saros_801065714@conference.saros-con.imp.fu-berlin.de/zhang_laptopoop@saros-con.imp.fu-berlin.de/Saros with state: composing
+DEBUG 00:10:59,329 [Smack Listener Processor (0)] (MultiUserChatStateManager.java:98) Incoming Message from saros_801065714@conference.saros-con.imp.fu-berlin.de/zhang_laptopoop@saros-con.imp.fu-berlin.de/Saros with state: inactive
+DEBUG 00:11:05,611 [Smack Listener Processor (0)] (MultiUserChatStateManager.java:98) Incoming Message from saros_801065714@conference.saros-con.imp.fu-berlin.de/zhang_laptopoop@saros-con.imp.fu-berlin.de/Saros with state: composing
+DEBUG 00:11:05,816 [Smack Listener Processor (0)] (MultiUserChatStateManager.java:98) Incoming Message from saros_801065714@conference.saros-con.imp.fu-berlin.de/zhang_laptopoop@saros-con.imp.fu-berlin.de/Saros with state: inactive
+DEBUG 00:11:11,404 [Smack Listener Processor (0)] (MultiUserChatStateManager.java:98) Incoming Message from saros_801065714@conference.saros-con.imp.fu-berlin.de/zhang_laptopoop@saros-con.imp.fu-berlin.de/Saros with state: composing
+DEBUG 00:11:12,051 [Smack Listener Processor (0)] (MultiUserChatStateManager.java:98) Incoming Message from saros_801065714@conference.saros-con.imp.fu-berlin.de/zhang_laptopoop@saros-con.imp.fu-berlin.de/Saros with state: inactive
+INFO  00:23:39,164 [saros-DispatchContext] (SarosSession.java:468) user oop_scal@saros-con.imp.fu-berlin.de/Saros left session
+INFO  00:23:39,416 [saros-shutdown] (SarosSessionManager.java:332) session stopped
+INFO  00:23:39,588 [saros-shutdown] (ContainerContext.java:205) disposing context...
+INFO  00:23:39,589 [saros-shutdown] (ContainerContext.java:209) successfully disposed context
+INFO  00:23:39,762 [Framework stop] (Saros.java:137) Stopping Saros 16.0.1

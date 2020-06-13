@@ -1,0 +1,26 @@
+package it.univpm.demoSpringApp.model;
+
+public class page_post {
+	
+	private class property{
+		private String id = "";
+		private String bithdate = "";
+		private String title = "";
+		//...		
+	}
+
+	private class Impression{
+		int impressions = 0;
+		int unique_impression = 0;
+		float impressions_per_capita = unique_impression/impressions;
+	}
+	private class Reactions{
+		int like= 0;
+		int wow = 0;
+		int love = 0;
+		int care = 0;
+		int haha = 0;
+		int total = like+wow+love+care+haha;
+	}
+	
+}

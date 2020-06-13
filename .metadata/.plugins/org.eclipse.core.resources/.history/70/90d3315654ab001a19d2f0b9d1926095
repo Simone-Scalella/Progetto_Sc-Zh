@@ -1,0 +1,96 @@
+package univpm.esempio.model;
+
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.util.Vector;
+
+import javax.script.ScriptEngine;
+import javax.script.ScriptEngineManager;
+import javax.script.ScriptException;
+
+import univpm.esempio.body.request_body;
+
+
+public class Statics {
+	
+	FB_page_info page = null;
+	ALL_post posts = null;
+	Vector<page_post> Posts_vector = null;
+	private float Media_click = 0;
+	private float Media_negativa = 0;
+	private float Media_virale = 0;
+	private boolean login = false;
+	private String Id = "";
+	private String Access_token = "";
+	public Statics() {};
+	
+	public boolean Login(String Id, String Acess_token, String period) {
+		
+		try {
+			this.Id = Id;
+			this.Access_token =Acess_token;
+			//this.period = period;
+			page = new FB_page_info(Id,Acess_token,period);
+			posts = new ALL_post(Id,Acess_token);
+			Media_click = Average(page.getMetric_Object().getPage_consumptions(),page.getMetric_Object().getPage_consumptions_unique());
+			Media_negativa = Average(page.getMetric_Object().getPage_negative_feedback(),page.getMetric_Object().getPage_negative_feedback_unique());
+		    Media_virale = Average(page.getMetric_Object().getPage_impressions(),page.getMetric_Object().getPage_impressions_unique());
+			Posts_vector = posts.getPosts();
+			login = true;			
+		}catch (Exception e ){login = false;}
+		
+		return login;
+	}	
+
+	
+	public Object filter_method(request_body query) {
+		
+		ScriptEngine sem = new ScriptEngineManager().getEngineByName("JavaScript");		
+		Vector<page_post> Posts_vector_2 = new Vector<page_post>();
+		try {
+			Method dyn_method = new page_post().getReactions_01().getClass().getMethod(("get"+query.getAttribute()));
+			for(page_post post : Posts_vector){
+				String impression_total =  ((Integer)dyn_method.invoke(post.getReactions_01())).toString();
+				String condition = impression_total+query.getOperator()+ query.getValue();            
+				if((boolean)sem.eval(condition)){Posts_vector_2.add(post);}
+			 }
+		}
+		catch (ScriptException e) 			{return ("Invalid Expression");} 
+		catch (NoSuchMethodException e) 	{return ("No Such Reaction");} 
+		catch (SecurityException e) 		{return ("Access Violation");}
+		catch (IllegalAccessException e) 	{e.printStackTrace();} 
+		catch (IllegalArgumentException e) 	{e.printStackTrace();} 
+		catch (InvocationTargetException e) {e.printStackTrace();}
+        System.out.println("filter completed");
+        return Posts_vector_2; //Vector<page_post>
+	}
+	
+	public String consumption_per_post()
+	{return ("consumption_per_post: " + ((float)page.getMetric_Object().getPage_impressions()/(float)Posts_vector.size()));}
+	
+	public String average_post_reaction(){
+		int total_reaction = 0;
+		for(page_post post:Posts_vector) {
+			total_reaction += post.getReactions_01().gettotal_impression();
+		}
+		return ("average_post_reaction: " + ((float)total_reaction/(float)Posts_vector.size()));
+	}
+	
+	public float Average(int a,int b){return (float)a/(float)b;}
+	
+	public Vector<page_post> get_all_Post() {return Posts_vector;}
+	
+	public boolean isLogin() {return login;}
+	
+	public FB_page_info get_page_all() {return page;}
+	
+	public void Update_period(String period) {page = new FB_page_info(Id,Access_token,period);}
+
+	public float getMedia_click() {return Media_click;}
+
+	public float getMedia_negativa() {return Media_negativa;}
+
+	public float getMedia_virale() {return Media_virale;}
+	 
+	
+}

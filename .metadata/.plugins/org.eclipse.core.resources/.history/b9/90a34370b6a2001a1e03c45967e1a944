@@ -1,0 +1,38 @@
+package it.univpm.demoSpringApp.model;
+
+import java.util.Vector;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+import org.springframework.web.client.RestTemplate;
+
+public class FB_page_info {
+  
+	private String ID ="";
+	private int Impressions = 0;
+	private String period = "28_days"; //must be defined
+	private String Access_Token = "";
+	private Vector<page_post> posts = null;
+	private String metrics = "page_posts_impressions,page_posts_impressions_unique,page_engaged_users";
+	
+	//Constructor
+	public FB_page_info(String page_ID,String Access_Token,String period) {
+		this.ID = page_ID;
+		this.Access_Token = Access_Token;
+		this.period = period;
+		//112228053835001
+		//EAAj9pRhdt7cBADoFODHvJhLjqnMdEZCKaz8ORVjZCUmdL0uubCSjjykBSAc2ZANdVoOO5ilUcW8Hd03NlefWTvQlgPjDeSNcsizn5dvhGaTgPiwLZCXDGOVdkL1CORzryXatEQEc1i38mR9og5ohFSf4iy8dqysyMcRsk3tsDAZDZD
+		
+		String response =  new RestTemplate().getForObject("https://graph.facebook.com/"+ID+"/insights?metric="+metrics+"&access_token="+Access_Token+"&period="+period, String.class);
+		
+	    //JSONObject obj = new JSONObject(response);
+	    JSONArray page_data = new JSONObject(response).getJSONArray("data");
+	    
+	    for (Object param:page_data) {
+	    	System.out.println("name: "+((JSONObject)param).get("name"));
+	    	System.out.println("values: "+((((JSONObject)param).getJSONArray("values")).getJSONObject(1)).get("value"));
+	    }
+	    
+	    
+	}
+}

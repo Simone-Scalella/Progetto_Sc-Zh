@@ -1,0 +1,13 @@
+package univpm.esempio.model;
+
+import java.util.Vector;
+
+public class request_body {
+	
+	private String value = "";
+	private String operator = "";
+	private String reactions = "";
+	public request_body() {};
+	
+	
+}

@@ -1,0 +1,20 @@
+INFO  01:59:02,003 [Worker-25: Session Startup] (ConsistencyAction.java:172) Starting Saros 16.0.1 running:
+  Java Version: 1.8.0_231
+  Java Vendor: Oracle Corporation
+  Eclipse Runtime Version: 3.17.100.v20200203-0917
+  Operating System: Windows 10 (10.0)
+  Hardware Architecture: amd64
+INFO  01:59:02,025 [Worker-25: Session Startup] (ConsistencyAction.java:172) initializing context...
+INFO  01:59:02,639 [Worker-25: Session Startup] (ConsistencyAction.java:172) initializing preference default values
+INFO  01:59:02,673 [Worker-25: Session Startup] (ConsistencyAction.java:172) successfully initialized context
+WARN  02:02:19,042 [Worker-25: Session Startup] (ConsistencyAction.java:172) watchdog client component is not available, cannot perform inconsistency notification
+INFO  02:02:20,207 [Worker-25: Session Startup] (SarosSessionManager.java:272) session started
+DEBUG 02:02:20,220 [Smack Listener Processor (0)] (MultiUserChatStateManager.java:98) Incoming Message from saros_1920219874@conference.saros-con.imp.fu-berlin.de/zhang_oop2020@saros-con.imp.fu-berlin.de/Saros with state: active
+INFO  02:02:29,253 [Worker-31: Inviting oop_scal@saros-con.imp.fu-berlin.de (oop_scal@saros-con.imp.fu-berlin.de)...] (SarosSession.java:354) user oop_scal@saros-con.imp.fu-berlin.de/Saros joined session
+DEBUG 02:02:29,612 [Smack Listener Processor (0)] (MultiUserChatStateManager.java:98) Incoming Message from saros_1920219874@conference.saros-con.imp.fu-berlin.de/oop_scal@saros-con.imp.fu-berlin.de/Saros with state: active
+INFO  02:02:42,169 [Worker-24: Synchronizing projects] (SarosSession.java:360) user oop_scal@saros-con.imp.fu-berlin.de/Saros started queuing projects and can receive IResourceActivities
+INFO  02:02:45,345 [Worker-24: Synchronizing projects] (SarosSession.java:389) user oop_scal@saros-con.imp.fu-berlin.de/Saros now has Projects and can process IResourceActivities
+INFO  02:05:01,398 [saros-shutdown] (SarosSessionManager.java:332) session stopped
+INFO  02:05:01,557 [saros-shutdown] (ContainerContext.java:205) disposing context...
+INFO  02:05:01,557 [saros-shutdown] (ContainerContext.java:209) successfully disposed context
+INFO  02:05:01,678 [Framework stop] (Saros.java:137) Stopping Saros 16.0.1

@@ -1,0 +1,24 @@
+WARN  22:19:05,885 [Worker-37: Building] (SharedResourcesManager.java:332) Resource changed while paused:
+C(0) /
+C(0) /FBdemo
+A /FBdemo/target
+A * /FBdemo/target/classes
+A /FBdemo/target/classes/application.properties
+A * /FBdemo/target/test-classes
+
+ERROR 22:22:10,514 [main] (EditorManager.java:703) TextEditActivity refers to file which is not available locally: TextEditActivity(start: [TextPosition - line number: 68, in-line offset: 2], new text line delta: 0, new text offset delta: 0, new: '', replaced text line delta: 0, replaced text offset delta: 1, old: '/', path: SPath [project=P/FBdemo (EclipseProjectImpl), projectRelativePath=src/main/java/univpm/esempio/demo/page_post.java], src: oop_scal@saros-con.imp.fu-berlin.de/Saros)
+WARN  22:22:12,266 [main] (UserEditorState.java:56) Viewport for editor which was never activated: SPath [project=P/FBdemo (EclipseProjectImpl), projectRelativePath=src/main/java/univpm/esempio/model/page_post.java]
+WARN  22:22:12,345 [main] (UserEditorState.java:56) Viewport for editor which was never activated: SPath [project=P/FBdemo (EclipseProjectImpl), projectRelativePath=src/main/java/univpm/esempio/model/page_post.java]
+WARN  22:22:35,460 [main] (TextEditActivity.java:312) NoOp Text edit: new '' old ''
+WARN  22:37:06,102 [Smack Listener Processor (0)] (SubscriptionHandler.java:128) received error presence package from saros_1936351386@conference.saros-con.imp.fu-berlin.de/zhang_oop2020@saros-con.imp.fu-berlin.de/Saros, condition: not-authorized, message: A password is required to enter this room
+WARN  22:37:14,674 [Worker-36: Building] (SharedResourcesManager.java:332) Resource changed while paused:
+C(0) /
+C(0) /FBdemo
+A /FBdemo/target
+A * /FBdemo/target/classes
+A /FBdemo/target/classes/application.properties
+A * /FBdemo/target/test-classes
+
+WARN  22:47:08,611 [main] (TextEditActivity.java:312) NoOp Text edit: new '' old ''
+WARN  22:47:08,804 [main] (TextEditActivity.java:312) NoOp Text edit: new '' old ''
+WARN  00:11:05,333 [Smack Listener Processor (0)] (SubscriptionHandler.java:128) received error presence package from saros_1936351386@conference.saros-con.imp.fu-berlin.de/zhang_oop2020@saros-con.imp.fu-berlin.de/Saros, condition: item-not-found, message: Conference room does not exist

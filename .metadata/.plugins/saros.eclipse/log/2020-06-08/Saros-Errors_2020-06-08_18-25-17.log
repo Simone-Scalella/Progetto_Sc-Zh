@@ -1,0 +1,106 @@
+WARN  18:25:17,502 [Smack Listener Processor (0)] (SubscriptionHandler.java:128) received error presence package from saros_481315070@conference.saros-con.imp.fu-berlin.de/zhang_laptopoop@saros-con.imp.fu-berlin.de/Saros, condition: not-authorized, message: A password is required to enter this room
+WARN  18:25:26,481 [pool-8-thread-1] (Socks5StreamService.java:329) [SOCKS5Transport] Received response connection without a running connect
+WARN  18:25:30,111 [Worker-13: Building] (SharedResourcesManager.java:332) Resource changed while paused:
+C(0) /
+C(0) /FBdemo
+C(0) /FBdemo/src
+C(0) /FBdemo/src/main
+C(0) /FBdemo/src/main/java
+C(0) /FBdemo/src/main/java/univpm
+C(0) /FBdemo/src/main/java/univpm/esempio
+C(0) /FBdemo/src/main/java/univpm/esempio/App
+C(M) /FBdemo/src/main/java/univpm/esempio/App/DemoApplication.java
+C(0) /FBdemo/src/main/java/univpm/esempio/App/controller
+C(M) /FBdemo/src/main/java/univpm/esempio/App/controller/simpleRestController.java
+C(0) /FBdemo/src/main/java/univpm/esempio/interf
+C(M) /FBdemo/src/main/java/univpm/esempio/interf/Download.java
+C(0) /FBdemo/src/main/java/univpm/esempio/model
+C(M) /FBdemo/src/main/java/univpm/esempio/model/ALL_post.java
+C(M) /FBdemo/src/main/java/univpm/esempio/model/FB_page_info.java
+C(M) /FBdemo/src/main/java/univpm/esempio/model/modello.java
+C(M) /FBdemo/src/main/java/univpm/esempio/model/page_post.java
+A /FBdemo/target
+A * /FBdemo/target/classes
+A * /FBdemo/target/classes/univpm
+A * /FBdemo/target/classes/univpm/esempio
+A * /FBdemo/target/classes/univpm/esempio/App
+A * /FBdemo/target/classes/univpm/esempio/App/DemoApplication.class
+A * /FBdemo/target/classes/univpm/esempio/App/controller
+A * /FBdemo/target/classes/univpm/esempio/App/controller/simpleRestController.class
+A * /FBdemo/target/classes/univpm/esempio/interf
+A * /FBdemo/target/classes/univpm/esempio/interf/Download.class
+A * /FBdemo/target/classes/univpm/esempio/model
+A * /FBdemo/target/classes/univpm/esempio/model/ALL_post.class
+A * /FBdemo/target/classes/univpm/esempio/model/FB_page_info$metric_values.class
+A * /FBdemo/target/classes/univpm/esempio/model/FB_page_info.class
+A * /FBdemo/target/classes/univpm/esempio/model/modello.class
+A * /FBdemo/target/classes/univpm/esempio/model/page_post$Impression.class
+A * /FBdemo/target/classes/univpm/esempio/model/page_post$Reactions.class
+A * /FBdemo/target/classes/univpm/esempio/model/page_post$property.class
+A * /FBdemo/target/classes/univpm/esempio/model/page_post.class
+A * /FBdemo/target/test-classes
+A * /FBdemo/target/test-classes/univpm
+A * /FBdemo/target/test-classes/univpm/esempio
+A * /FBdemo/target/test-classes/univpm/esempio/demo
+A * /FBdemo/target/test-classes/univpm/esempio/demo/DemoApplicationTests.class
+
+ERROR 18:42:17,303 [saros-activity-sender] (ActivitySequencer.java:528) failed to sent activities: [JupiterActivity(timestamp: [16,68], operation: Noop(0,''), source: zhang_laptopoop@saros-con.imp.fu-berlin.de/Saros), JupiterActivity(timestamp: [16,79], operation: Noop(0,''), source: zhang_laptopoop@saros-con.imp.fu-berlin.de/Saros), JupiterActivity(timestamp: [16,33], operation: Noop(0,''), source: zhang_laptopoop@saros-con.imp.fu-berlin.de/Saros), JupiterActivity(timestamp: [16,56], operation: Noop(0,''), source: zhang_laptopoop@saros-con.imp.fu-berlin.de/Saros)]
+java.io.IOException: not connected to oop_scal@saros-con.imp.fu-berlin.de/Saros [connection identifier=saros-main-session]
+	at saros.net.internal.XMPPTransmitter.send(XMPPTransmitter.java:96)
+	at saros.session.internal.ActivitySequencer.sendActivities(ActivitySequencer.java:526)
+	at saros.session.internal.ActivitySequencer.access$3(ActivitySequencer.java:461)
+	at saros.session.internal.ActivitySequencer$2.run(ActivitySequencer.java:147)
+	at saros.util.ThreadUtils$1.run(ThreadUtils.java:34)
+	at java.lang.Thread.run(Unknown Source)
+ERROR 18:42:28,400 [Smack Packet Reader (0)] (XMPPConnectionService.java:104) XMPP connection error: 
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.security.ssl.InputRecord.readFully(Unknown Source)
+	at sun.security.ssl.InputRecord.read(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.readDataRecord(Unknown Source)
+	at sun.security.ssl.AppInputStream.read(Unknown Source)
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+	at sun.nio.cs.StreamDecoder.implRead(Unknown Source)
+	at sun.nio.cs.StreamDecoder.read(Unknown Source)
+	at java.io.InputStreamReader.read(Unknown Source)
+	at java.io.BufferedReader.fill(Unknown Source)
+	at java.io.BufferedReader.read1(Unknown Source)
+	at java.io.BufferedReader.read(Unknown Source)
+	at org.xmlpull.mxp1.MXParser.fillBuf(MXParser.java:2992)
+	at org.xmlpull.mxp1.MXParser.more(MXParser.java:3046)
+	at org.xmlpull.mxp1.MXParser.nextImpl(MXParser.java:1144)
+	at org.xmlpull.mxp1.MXParser.next(MXParser.java:1093)
+	at org.jivesoftware.smack.PacketReader.parsePackets(PacketReader.java:312)
+	at org.jivesoftware.smack.PacketReader.access$000(PacketReader.java:48)
+	at org.jivesoftware.smack.PacketReader$1.run(PacketReader.java:76)
+ERROR 18:42:28,401 [Smack Packet Reader (0)] (XMPPConnectionService.java:386)  new connection state == ERROR
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.security.ssl.InputRecord.readFully(Unknown Source)
+	at sun.security.ssl.InputRecord.read(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.readDataRecord(Unknown Source)
+	at sun.security.ssl.AppInputStream.read(Unknown Source)
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+	at sun.nio.cs.StreamDecoder.implRead(Unknown Source)
+	at sun.nio.cs.StreamDecoder.read(Unknown Source)
+	at java.io.InputStreamReader.read(Unknown Source)
+	at java.io.BufferedReader.fill(Unknown Source)
+	at java.io.BufferedReader.read1(Unknown Source)
+	at java.io.BufferedReader.read(Unknown Source)
+	at org.xmlpull.mxp1.MXParser.fillBuf(MXParser.java:2992)
+	at org.xmlpull.mxp1.MXParser.more(MXParser.java:3046)
+	at org.xmlpull.mxp1.MXParser.nextImpl(MXParser.java:1144)
+	at org.xmlpull.mxp1.MXParser.next(MXParser.java:1093)
+	at org.jivesoftware.smack.PacketReader.parsePackets(PacketReader.java:312)
+	at org.jivesoftware.smack.PacketReader.access$000(PacketReader.java:48)
+	at org.jivesoftware.smack.PacketReader$1.run(PacketReader.java:76)
+WARN  22:35:32,699 [Smack Listener Processor (1)] (SubscriptionHandler.java:128) received error presence package from saros_548112568@conference.saros-con.imp.fu-berlin.de/zhang_laptopoop@saros-con.imp.fu-berlin.de/Saros, condition: not-authorized, message: A password is required to enter this room
+WARN  22:35:33,212 [pool-12-thread-1] (Socks5StreamService.java:329) [SOCKS5Transport] Received response connection without a running connect

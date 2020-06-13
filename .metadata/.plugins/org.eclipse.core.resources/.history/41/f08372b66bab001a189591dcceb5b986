@@ -1,0 +1,28 @@
+package univpm.OOP2020.body;
+/**
+ * <p>
+ * <b>Classe</b> che contiene componenti della condizione del filtro
+ * </p>
+ * @author Zhang Yihang & Scalella Simone
+ * @see univpm.OOP2020.model.Statics#filter_method(request_body)
+ */
+public class request_body {
+	/**
+	 * <code>String</code> che contiene operatore logica (==,<=,>=,<,> ecc) della condizione
+	 */
+	private String operator = null;
+	/**
+	 * <code>String</code> che contiene valore in int della condzione
+	 */
+	private String value = null;
+	/**
+	 * <code>String</code> che contiene attributo della condizione
+	 */
+	private String attribute = null;
+	
+	public request_body() {};
+	
+	public String getOperator() {return operator;}
+	public String getValue() {return value;}
+	public String getAttribute() {return attribute;}	
+}

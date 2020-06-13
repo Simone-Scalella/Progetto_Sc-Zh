@@ -1,0 +1,6 @@
+package univpm.esempio.model;
+
+public class JSONerror {
+	private String message = "";
+	
+}

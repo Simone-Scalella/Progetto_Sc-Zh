@@ -1,0 +1,14 @@
+package univpm.OOP2020.interf;
+import org.json.JSONObject;
+/**
+ * 
+ * <p>
+ * <b></b>
+ * </p>
+ *
+ */
+public interface Download {
+	
+	public JSONObject GetPage(String ID,String Access_token,String metrics);
+
+}

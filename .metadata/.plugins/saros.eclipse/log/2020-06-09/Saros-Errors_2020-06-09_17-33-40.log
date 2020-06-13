@@ -1,0 +1,33 @@
+WARN  17:33:40,977 [Worker-6: Session Startup] (ConsistencyAction.java:172) watchdog client component is not available, cannot perform inconsistency notification
+ERROR 17:34:12,552 [Worker-8: Inviting oop_scal@saros-con.imp.fu-berlin.de (oop_scal@saros-con.imp.fu-berlin.de)...] (Negotiation.java:450) canceled negotiation OSN [remote side: oop_scal@saros-con.imp.fu-berlin.de/Saros] because the remote side encountered an error: I am already in a Saros session and so cannot accept your invitation.
+ERROR 17:34:37,527 [Worker-8: Inviting oop_scal@saros-con.imp.fu-berlin.de (oop_scal@saros-con.imp.fu-berlin.de)...] (Negotiation.java:450) canceled negotiation OSN [remote side: oop_scal@saros-con.imp.fu-berlin.de/Saros] because the remote side encountered an error: I am already in a Saros session and so cannot accept your invitation.
+ERROR 20:38:04,990 [BinaryChannel-oop_scal] (BinaryChannelConnection.java:103) [mode=SOCKS5 (D), id=saros-main-session] oop_scal@saros-con.imp.fu-berlin.de/Saros network error: Read timed out
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.io.BufferedInputStream.fill(Unknown Source)
+	at java.io.BufferedInputStream.read(Unknown Source)
+	at java.io.DataInputStream.readUnsignedByte(Unknown Source)
+	at saros.net.internal.BinaryChannelConnection.readNextXMPPExtension(BinaryChannelConnection.java:293)
+	at saros.net.internal.BinaryChannelConnection.access$1(BinaryChannelConnection.java:289)
+	at saros.net.internal.BinaryChannelConnection$ReceiverThread.run(BinaryChannelConnection.java:94)
+ERROR 20:38:06,063 [saros-activity-sender] (ActivitySequencer.java:528) failed to sent activities: [ChecksumActivity(path: SPath [project=P/FBdemo (EclipseProjectImpl), projectRelativePath=src/main/java/univpm/esempio/interf/Download.java], hash: 701065277, length: 167, jupiterTimestamp: [366,182]), ChecksumActivity(path: SPath [project=P/FBdemo (EclipseProjectImpl), projectRelativePath=src/main/java/univpm/esempio/model/ALL_post.java], hash: 1229744061, length: 1246, jupiterTimestamp: [366,182]), ChecksumActivity(path: SPath [project=P/FBdemo (EclipseProjectImpl), projectRelativePath=src/main/java/univpm/esempio/model/request_body.java], hash: 527351641, length: 289, jupiterTimestamp: [484,256]), ChecksumActivity(path: SPath [project=P/FBdemo (EclipseProjectImpl), projectRelativePath=src/main/java/univpm/esempio/App/DemoApplication.java], hash: 1431764605, length: 353, jupiterTimestamp: [366,182]), ChecksumActivity(path: SPath [project=P/FBdemo (EclipseProjectImpl), projectRelativePath=src/main/java/univpm/esempio/model/Statics.java], hash: 208517695, length: 2611, jupiterTimestamp: [590,693]), ChecksumActivity(path: SPath [project=P/FBdemo (EclipseProjectImpl), projectRelativePath=src/main/java/univpm/esempio/model/FB_page_info.java], hash: -230458960, length: 3032, jupiterTimestamp: [366,182])]
+java.io.IOException: not connected to oop_scal@saros-con.imp.fu-berlin.de/Saros [connection identifier=saros-main-session]
+	at saros.net.internal.XMPPTransmitter.send(XMPPTransmitter.java:96)
+	at saros.session.internal.ActivitySequencer.sendActivities(ActivitySequencer.java:526)
+	at saros.session.internal.ActivitySequencer.access$3(ActivitySequencer.java:461)
+	at saros.session.internal.ActivitySequencer$2.run(ActivitySequencer.java:147)
+	at saros.util.ThreadUtils$1.run(ThreadUtils.java:34)
+	at java.lang.Thread.run(Unknown Source)
+ERROR 22:03:47,721 [Worker-97: Inviting oop_scal@saros-con.imp.fu-berlin.de (oop_scal@saros-con.imp.fu-berlin.de)...] (Negotiation.java:438) canceled negotiation OSN [remote side: oop_scal@saros-con.imp.fu-berlin.de], error: oop_scal@saros-con.imp.fu-berlin.de does not support Saros or the request timed out. Please try again.
+WARN  23:33:47,238 [main] (TextEditActivity.java:312) NoOp Text edit: new '' old ''
+ERROR 00:23:39,717 [saros-activity-sender] (ActivitySequencer.java:528) failed to sent activities: [EditorActivity(type: CLOSED, path: SPath [project=P/FBdemo (EclipseProjectImpl), projectRelativePath=src/main/java/univpm/esempio/model/page_post.java])]
+java.io.IOException: not connected to oop_scal@saros-con.imp.fu-berlin.de/Saros [connection identifier=saros-main-session]
+	at saros.net.internal.XMPPTransmitter.send(XMPPTransmitter.java:96)
+	at saros.session.internal.ActivitySequencer.sendActivities(ActivitySequencer.java:526)
+	at saros.session.internal.ActivitySequencer.access$3(ActivitySequencer.java:461)
+	at saros.session.internal.ActivitySequencer$2.run(ActivitySequencer.java:147)
+	at saros.util.ThreadUtils$1.run(ThreadUtils.java:34)
+	at java.lang.Thread.run(Unknown Source)

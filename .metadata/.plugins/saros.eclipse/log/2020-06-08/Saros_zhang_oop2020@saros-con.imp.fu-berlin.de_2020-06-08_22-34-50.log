@@ -1,0 +1,136 @@
+INFO  22:34:01,104 [saros-DispatchContext] (NegotiationPacketListener.java:227) Starting Saros 16.0.1 running:
+  Java Version: 1.8.0_221
+  Java Vendor: Oracle Corporation
+  Eclipse Runtime Version: 3.17.100.v20200203-0917
+  Operating System: Windows 10 (10.0)
+  Hardware Architecture: amd64
+INFO  22:34:01,129 [saros-DispatchContext] (NegotiationPacketListener.java:227) initializing context...
+INFO  22:34:01,769 [saros-DispatchContext] (NegotiationPacketListener.java:227) initializing preference default values
+INFO  22:34:01,807 [saros-DispatchContext] (NegotiationPacketListener.java:227) successfully initialized context
+INFO  22:34:50,788 [saros-DispatchContext] (NegotiationPacketListener.java:227) received invitation from oop_scal@saros-con.imp.fu-berlin.de/Saros [negotiation id: 4859600577517605610, session id: 548112568, version: 16.0.1]
+INFO  22:34:52,531 [ModalContext] (SarosSessionManager.java:288) joined uninitialized Saros session
+INFO  22:34:52,532 [ModalContext] (DataTransferManager.java:269) establishing connection to oop_scal@saros-con.imp.fu-berlin.de/Saros from zhang_oop2020@saros-con.imp.fu-berlin.de/Saros using stream service XMPP-Socks5-Stream-Service
+WARN  22:34:57,025 [Smack Listener Processor (0)] (SubscriptionHandler.java:128) received error presence package from saros_548112568@conference.saros-con.imp.fu-berlin.de/zhang_oop2020@saros-con.imp.fu-berlin.de/Saros, condition: not-authorized, message: A password is required to enter this room
+DEBUG 22:34:57,123 [Smack Listener Processor (0)] (MultiUserChatStateManager.java:98) Incoming Message from saros_548112568@conference.saros-con.imp.fu-berlin.de/oop_scal@saros-con.imp.fu-berlin.de/Saros with state: active
+DEBUG 22:34:57,336 [Smack Listener Processor (0)] (MultiUserChatStateManager.java:98) Incoming Message from saros_548112568@conference.saros-con.imp.fu-berlin.de/zhang_oop2020@saros-con.imp.fu-berlin.de/Saros with state: active
+INFO  22:34:57,883 [saros-DispatchContext] (NegotiationPacketListener.java:310) received project negotiation from oop_scal@saros-con.imp.fu-berlin.de/Saros with negotiation id: 2112596112467369822
+INFO  22:35:05,088 [saros-DispatchContext] (SarosSession.java:389) user oop_scal@saros-con.imp.fu-berlin.de/Saros now has Projects and can process IResourceActivities
+WARN  22:35:06,236 [Worker-22: Building] (SharedResourcesManager.java:332) Resource changed while paused:
+C(0) /
+C(0) /FBdemo
+A /FBdemo/target
+A * /FBdemo/target/classes
+A /FBdemo/target/classes/application.properties
+A * /FBdemo/target/test-classes
+
+WARN  22:35:08,674 [pool-8-thread-1] (Socks5StreamService.java:329) [SOCKS5Transport] Received response connection without a running connect
+DEBUG 22:35:31,925 [Smack Listener Processor (0)] (MultiUserChatStateManager.java:98) Incoming Message from saros_548112568@conference.saros-con.imp.fu-berlin.de/oop_scal@saros-con.imp.fu-berlin.de/Saros with state: composing
+INFO  22:35:32,075 [saros-DispatchContext] (SarosSession.java:354) user zhang_laptopoop@saros-con.imp.fu-berlin.de/Saros joined session
+DEBUG 22:35:33,221 [Smack Listener Processor (0)] (MultiUserChatStateManager.java:98) Incoming Message from saros_548112568@conference.saros-con.imp.fu-berlin.de/oop_scal@saros-con.imp.fu-berlin.de/Saros with state: inactive
+DEBUG 22:35:33,656 [Smack Listener Processor (0)] (MultiUserChatStateManager.java:98) Incoming Message from saros_548112568@conference.saros-con.imp.fu-berlin.de/zhang_laptopoop@saros-con.imp.fu-berlin.de/Saros with state: active
+DEBUG 22:35:37,035 [Smack Listener Processor (0)] (MultiUserChatStateManager.java:98) Incoming Message from saros_548112568@conference.saros-con.imp.fu-berlin.de/oop_scal@saros-con.imp.fu-berlin.de/Saros with state: composing
+DEBUG 22:35:37,093 [Smack Listener Processor (0)] (MultiUserChatStateManager.java:98) Incoming Message from saros_548112568@conference.saros-con.imp.fu-berlin.de/oop_scal@saros-con.imp.fu-berlin.de/Saros with state: inactive
+DEBUG 22:35:39,471 [Smack Listener Processor (0)] (MultiUserChatStateManager.java:98) Incoming Message from saros_548112568@conference.saros-con.imp.fu-berlin.de/oop_scal@saros-con.imp.fu-berlin.de/Saros with state: composing
+DEBUG 22:35:39,721 [Smack Listener Processor (0)] (MultiUserChatStateManager.java:98) Incoming Message from saros_548112568@conference.saros-con.imp.fu-berlin.de/oop_scal@saros-con.imp.fu-berlin.de/Saros with state: inactive
+DEBUG 22:35:40,414 [Smack Listener Processor (0)] (MultiUserChatStateManager.java:98) Incoming Message from saros_548112568@conference.saros-con.imp.fu-berlin.de/oop_scal@saros-con.imp.fu-berlin.de/Saros with state: composing
+DEBUG 22:35:40,621 [Smack Listener Processor (0)] (MultiUserChatStateManager.java:98) Incoming Message from saros_548112568@conference.saros-con.imp.fu-berlin.de/oop_scal@saros-con.imp.fu-berlin.de/Saros with state: inactive
+DEBUG 22:35:41,135 [Smack Listener Processor (0)] (MultiUserChatStateManager.java:98) Incoming Message from saros_548112568@conference.saros-con.imp.fu-berlin.de/oop_scal@saros-con.imp.fu-berlin.de/Saros with state: composing
+DEBUG 22:35:41,285 [Smack Listener Processor (0)] (MultiUserChatStateManager.java:98) Incoming Message from saros_548112568@conference.saros-con.imp.fu-berlin.de/oop_scal@saros-con.imp.fu-berlin.de/Saros with state: inactive
+DEBUG 22:35:42,358 [Smack Listener Processor (0)] (MultiUserChatStateManager.java:98) Incoming Message from saros_548112568@conference.saros-con.imp.fu-berlin.de/oop_scal@saros-con.imp.fu-berlin.de/Saros with state: composing
+DEBUG 22:35:42,508 [Smack Listener Processor (0)] (MultiUserChatStateManager.java:98) Incoming Message from saros_548112568@conference.saros-con.imp.fu-berlin.de/oop_scal@saros-con.imp.fu-berlin.de/Saros with state: inactive
+DEBUG 22:35:44,448 [Smack Listener Processor (0)] (MultiUserChatStateManager.java:98) Incoming Message from saros_548112568@conference.saros-con.imp.fu-berlin.de/oop_scal@saros-con.imp.fu-berlin.de/Saros with state: composing
+DEBUG 22:35:44,969 [Smack Listener Processor (0)] (MultiUserChatStateManager.java:98) Incoming Message from saros_548112568@conference.saros-con.imp.fu-berlin.de/oop_scal@saros-con.imp.fu-berlin.de/Saros with state: inactive
+INFO  22:35:48,553 [saros-DispatchContext] (SarosSession.java:389) user oop_scal@saros-con.imp.fu-berlin.de/Saros now has Projects and can process IResourceActivities
+WARN  22:35:50,516 [main] (FileUtils.java:81) folder already exists: F/FBdemo/target
+StackTrace:
+	at saros.util.FileUtils.create(FileUtils.java:81)
+	at saros.project.FolderActivityConsumer.receive(FolderActivityConsumer.java:65)
+	at saros.activities.FolderCreatedActivity.dispatch(FolderCreatedActivity.java:19)
+	at saros.session.AbstractActivityConsumer.exec(AbstractActivityConsumer.java:79)
+	at saros.project.FolderActivityConsumer.exec(FolderActivityConsumer.java:49)
+	at saros.session.internal.SarosSession$2.execute(SarosSession.java:193)
+	at saros.session.internal.ActivityHandler$3.run(ActivityHandler.java:358)
+	at saros.util.ThreadUtils$1.run(ThreadUtils.java:34)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3897)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3527)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:658)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:557)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:154)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:150)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1447)
+WARN  23:01:17,583 [main] (EditorAPI.java:270) could not get resource reference from editor part: org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitEditor@367e2e46
+WARN  23:01:17,683 [main] (EditorAPI.java:270) could not get resource reference from editor part: org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitEditor@367e2e46
+WARN  23:01:17,878 [main] (EditorAPI.java:270) could not get resource reference from editor part: org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitEditor@367e2e46
+WARN  23:01:29,695 [main] (EditorAPI.java:270) could not get resource reference from editor part: org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitEditor@367e2e46
+INFO  00:51:11,093 [saros-stop-host] (SarosSessionManager.java:332) session stopped
+ERROR 00:58:01,231 [Smack Packet Reader (0)] (XMPPConnectionService.java:104) XMPP connection error: 
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.security.ssl.InputRecord.readFully(Unknown Source)
+	at sun.security.ssl.InputRecord.read(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.readDataRecord(Unknown Source)
+	at sun.security.ssl.AppInputStream.read(Unknown Source)
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+	at sun.nio.cs.StreamDecoder.implRead(Unknown Source)
+	at sun.nio.cs.StreamDecoder.read(Unknown Source)
+	at java.io.InputStreamReader.read(Unknown Source)
+	at java.io.BufferedReader.fill(Unknown Source)
+	at java.io.BufferedReader.read1(Unknown Source)
+	at java.io.BufferedReader.read(Unknown Source)
+	at org.xmlpull.mxp1.MXParser.fillBuf(MXParser.java:2992)
+	at org.xmlpull.mxp1.MXParser.more(MXParser.java:3046)
+	at org.xmlpull.mxp1.MXParser.nextImpl(MXParser.java:1144)
+	at org.xmlpull.mxp1.MXParser.next(MXParser.java:1093)
+	at org.jivesoftware.smack.PacketReader.parsePackets(PacketReader.java:312)
+	at org.jivesoftware.smack.PacketReader.access$000(PacketReader.java:48)
+	at org.jivesoftware.smack.PacketReader$1.run(PacketReader.java:76)
+ERROR 00:58:01,232 [Smack Packet Reader (0)] (XMPPConnectionService.java:386)  new connection state == ERROR
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.security.ssl.InputRecord.readFully(Unknown Source)
+	at sun.security.ssl.InputRecord.read(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.readDataRecord(Unknown Source)
+	at sun.security.ssl.AppInputStream.read(Unknown Source)
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+	at sun.nio.cs.StreamDecoder.implRead(Unknown Source)
+	at sun.nio.cs.StreamDecoder.read(Unknown Source)
+	at java.io.InputStreamReader.read(Unknown Source)
+	at java.io.BufferedReader.fill(Unknown Source)
+	at java.io.BufferedReader.read1(Unknown Source)
+	at java.io.BufferedReader.read(Unknown Source)
+	at org.xmlpull.mxp1.MXParser.fillBuf(MXParser.java:2992)
+	at org.xmlpull.mxp1.MXParser.more(MXParser.java:3046)
+	at org.xmlpull.mxp1.MXParser.nextImpl(MXParser.java:1144)
+	at org.xmlpull.mxp1.MXParser.next(MXParser.java:1093)
+	at org.jivesoftware.smack.PacketReader.parsePackets(PacketReader.java:312)
+	at org.jivesoftware.smack.PacketReader.access$000(PacketReader.java:48)
+	at org.jivesoftware.smack.PacketReader$1.run(PacketReader.java:76)
+INFO  01:53:38,434 [saros-shutdown] (ContainerContext.java:205) disposing context...
+INFO  01:53:38,435 [saros-shutdown] (ContainerContext.java:209) successfully disposed context
+INFO  01:53:38,555 [Framework stop] (Saros.java:137) Stopping Saros 16.0.1
